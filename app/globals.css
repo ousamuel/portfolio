@@ -232,6 +232,7 @@ li {
 /* .dropdown:hover svg:first-child {
   margin-top: 25px;
 } */
+
 @media (max-width: 1024px) {
   p{
     line-height: 1.2;
@@ -271,6 +272,11 @@ li {
   #projects {
     padding-left: 5px;
     padding-right: 5px;
+  }
+}
+@media (max-width: 700px){
+  .project-card {
+    width: 80vw;
   }
 }
 @media (max-width: 512px) {

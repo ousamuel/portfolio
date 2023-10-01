@@ -252,7 +252,7 @@ export default function Home() {
         {projects.map((project) => (
           <Card
             key={project.title}
-            className="rounded-small m-5 py-5 bg-gray-300 max-w-md project-card"
+            className="rounded-small m-5 py-5 bg-gray-300 max-w-xl project-card"
           >
             <CardBody className="overflow-visible pt-1 items-center h-auto">
               <Link
