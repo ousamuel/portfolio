@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+
+@font-face {
+  font-family: "Munich"; /* You can name it whatever you like */
+  src: url("/fonts/munich.ttf") format("truetype"); /* Add more sources if you have them */
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,8 +21,14 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+html {
+  color: white;
+  scroll-behavior: smooth;
+}
 body {
+  font-family: "Munich";
+  color: rgb(0, 0, 0);
+  /* padding: 20px; */
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +36,280 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+h1{
+  color: rgb(254 243 199);
+  font-weight: 900;
+  font-size: 3rem;
+}
+h2 {
+  font-size: 110px;
+  opacity: 0;
+  color: rgb(245, 245, 220);
+  padding: 15px;
+  padding-left: 0px;
+  
+  /* -webkit-text-stroke: 3px rgb(0, 0, 0); */
+}
+p {
+  line-height: 1.4;
+}
+.project-card:hover {
+  transform: scaleY(1.1) scaleX(1.1);
+}
+.project-card {
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3) 0.5s; 
+  width: 40vw;
+  min-width: 300px;
+}
+.bio {
+  font-size: 30px;
+  width: 80%;
+  opacity: 0;
+  animation: slideIn 1s forwards;
+  animation-delay: 0.75s;
+}
+.home-logo {
+  opacity: 0;
+  width: 100%;
+  max-width: 600px;
+  animation: slideIn 1s forwards;
+  padding-top:50px;
+}
+.opening-slide {
+  animation: slideIn 1s forwards;
+  /* animation-delay: 0.2s; */
+
+}
+.resume{
+  opacity:0;
+  animation: slideIn 1s forwards;
+  animation-delay: 1.5s;
+
+}
+.resume-pop:hover{
+  background-color: rgb(181, 168, 127);
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(8%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    /* display:flex; */
+  }
+}
+@keyframes slideTop {
+  from {
+    transform: translateY(-8%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.welcome-left {
+  width: 60%;
+  padding-left: 80px;
+}
+.welcome-right {
+  width: 40%;
+}
+.container {
+  color: white(0, 0, 0);
+  padding: 50px;
+  /* font-size: 75px; */
+  padding-top: 100px;
+  min-height: 100vh;
+  min-width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation a:hover,
+.link:hover, .dropbox:hover{
+  color: black;
+  cursor: pointer;
+}
+.link {
+  transition: color 0.3s ease-in-out;
+}
+.image-rep {
+  border-radius: 0px;
+  filter: invert(1) grayscale(1) brightness(10);
+}
+.image-rep:hover {
+  filter: none;
+  transition: filter ;
+}
+.so-logo {
+  width: 35px;
+}
+
+.navbar {
+  opacity: 0;
+  color: white;
+  width: 100%;
+  height: 65px;
+  z-index: 10001;
+  display: flex;
+  vertical-align: middle;
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(92, 95, 101);
+  transition: background-color 0.25s ease-in-out;
+  animation: slideTop 1s forwards;
+  animation-delay: 2.5s;
+}
+.dropdown {
+  height: 25px;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(2px);
+}
+/* .dropdown:hover, .so-logo:hover {
+  cursor: pointer;
+} */
+.dropdown.open svg:first-child {
+  margin-top: 25px;
+} 
+.arrow1 {
+  transform: translateY(-25px) rotate(180deg);
+}
+.arrow2 {
+  transform: translateY(-25px);
+}
+.dropdown svg {
+  transition: margin-top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+}
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-100vh);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(.45,.85,.35,.85) ;
+}
+.dropdown-menu.open {
+  font-size: 50px;
+  position: fixed;
+  background-color: rgb(92, 95, 101);
+  backface-visibility: hidden;
+  z-index: -100000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px;
+  padding-top: 100px;
+  opacity: 1;
+  transform: translateY(0);
+  /* box-shadow: 50px 50px 100px 100px rgba(0, 0, 0, 0.1); */
+}
+li {
+  text-align: left;
+}
+.socials {
+  display: flex;
+  padding-left: 100px;
+}
+
+/* .socials::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 3px;
+  width: 80px;
+  margin-top: -2px;
+  background-color: white;
+} */
+/* .dropdown:hover svg:first-child {
+  margin-top: 25px;
+} */
+@media (max-width: 1024px) {
+  p{
+    line-height: 1.2;
+    /* font-size: 40px; */
+  }
+  .welcome-left{
+    padding-left:0px;
+  }
+  .welcome-left,
+  .welcome-right, .resume {
+    width: 100%;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-section {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  .edu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bio {
+    width: 90%;
+    margin:auto;
+  }
+  #projects {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+@media (max-width: 512px) {
+  p {
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 75px;
+  }
+  .home-logo{
+    padding-top:60px;
+
+  }
+  .socials{
+    padding-left:0px;
+  }
+  .bio {
+    font-size: 25px;
+  }
+  .about-section{
+    width: 95%;
+  }
+  .container {
+    font-size: 40px;
+    padding: 25px;
+    padding-top: 90px;
+  }
+  .welcome-left,
+  .welcome-right {
+    width: 100%;
+    padding-left: 0px;
+  }
+  
+  .navbar {
+    padding-left: 30px;
+  }
+  .so-logo {
+    padding-top: 0px;
+    width: 30px;
+  }
 }
