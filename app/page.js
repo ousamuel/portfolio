@@ -34,14 +34,22 @@ export default function Home() {
       github: "https://github.com/ousamuel/fitness-app",
       title: "SteelStance",
       description:
-        "Fullstack fitness application, LoremLoremL oremLore LoremLorem LoremL remLo remLorem ipsum dolor sit amet, consectetur adipiscing elit,",
+        "Fullstack fitness application developed using the framework Next.js with a Flask backend. Anonoymous users can view programs and personal records, registered users have access to saving/posting features",
       src: "/images/steelstance.png",
       live: "https://fitness-app-ousamuel.vercel.app/",
     },
     {
+      github: "https://github.com/ousamuel/Auto-Repair",
+      title: "Auto Shop",
+      description:
+        "Fullstack website that provides services, scheduling, and sign-up options. Users can select from a list of offered services and schedule based on available dates/times, sign-up not required.",
+      src: "/images/auto-gallery.png",
+    },
+    {
       github: "https://github.com/ousamuel/Subreddit-Clone",
       title: "r/BrewCrew",
-      description: "Subreddit clone - single page application",
+      description:
+        "Subreddit clone - single page application. Developed using only vanilla JavaScript, combined with HTML & CSS ",
       src: "/images/subreddit.png",
     },
   ];
@@ -283,7 +291,7 @@ export default function Home() {
       </div>
       <div id="contact-me" className="container">
         {/* Contact */}
-        <h1 className='text-2xl'>Email me @ samuelou510@gmail.com</h1>
+        <h1 className="text-2xl">Email me @ samuelou510@gmail.com</h1>
         {/* <Contact /> */}
       </div>
     </div>
