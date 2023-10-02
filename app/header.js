@@ -83,7 +83,7 @@ export default function Header({ hide }) {
       </div>
       {/* <h1 className='text-3xl font-bold'>Sam</h1> */}
 
-      <div className={isOpen ? "dropdown-menu open" : "dropdown-menu"}>
+      <div className={isOpen ? "dropdown-menu open " : "dropdown-menu"}>
         {/* <ul className="socials">
           <li>
             <Link

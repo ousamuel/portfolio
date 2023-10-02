@@ -198,7 +198,36 @@ export default function Home() {
         </div>
       </div>
       <div id="about" className="container text-4xl mt-10">
-        <div className="welcome-right pl-10 items-center justify-center ">
+        <div className="welcome-right ">
+          <h1 className="pb-2 text-center">Education</h1>
+          <ul className="edu">
+            <li className=" text-xl flex justify-center items-center ">
+              <Image
+                className="m-2 ml-0 w-[40px]"
+                src="/images/sbu.png"
+                alt="sbu-logo"
+              />
+              Stony Brook University
+              <br />- B.S. in Biology
+            </li>
+            <li className=" text-xl flex justify-center items-center">
+              <Image
+                className="rounded-full m-2.5 w-[38px]"
+                src="/images/flatironlogo.png"
+                alt="sbu-logo"
+              />
+              Flatiron School
+            </li>
+            <li className='flex justify-center items-center'>
+              <Image
+                className=" h-[300px] sm:h-[450px]  "
+                src="/images/profile.png"
+                alt="portrait"
+              />
+            </li>
+          </ul>
+        </div>
+        {/* <div className="welcome-right pl-10 items-center justify-center ">
           <h1 className="pb-2 lg:pl-10">Education</h1>
           <ul className="edu">
             <li className=" text-xl flex items-center text-center">
@@ -226,7 +255,7 @@ export default function Home() {
               />
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="welcome-left about-section">
           <h1 className="opening-slide pl-6">About me</h1>
           <p className="text-2xl p-6 font-bold lower">

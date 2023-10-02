@@ -167,7 +167,7 @@ p {
   background-color: rgb(92, 95, 101);
   transition: background-color 0.25s ease-in-out;
   animation: slideTop 1s forwards;
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 .dropdown {
   height: 25px;
@@ -204,12 +204,12 @@ p {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   padding: 50px;
   padding-top: 100px;
   opacity: 1;
   transform: translateY(0);
-  /* box-shadow: 50px 50px 100px 100px rgba(0, 0, 0, 0.1); */
+  box-shadow: 50px 50px 100px 100px rgba(0, 0, 0, 0.6);
 }
 li {
   text-align: left;
