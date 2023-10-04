@@ -2,7 +2,21 @@
 import { useState, useEffect, useContext } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Image,
+  Link,
+  NextUIProvider,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -29,27 +43,17 @@ export default function Contact() {
     }
   };
 
-  
   const schema = Yup.object().shape({
-    username: Yup.string()
-      .required("Username is a required field")
-      .min(5, "Username must be at least 5 characters"),
     email: Yup.string()
       .required("Email is a required field")
       .email("Invalid email format"),
-    password: Yup.string()
-      .required("Password is a required field")
-      .min(6, "Password must be at least 6 characters"),
-    confirm: Yup.string()
-      .required("Password must match")
-      .oneOf([Yup.ref("password"), null], "Passwords must match"),
+    message: Yup.string()
+      .required("Message is a required field"),
   });
   const formik = useFormik({
     initialValues: {
-      username: "",
-      email: "",
-      password: "",
-      confirm: "",
+      email: email,
+      message: message,
     },
     validationSchema: schema,
   });
@@ -57,7 +61,7 @@ export default function Contact() {
     <form onSubmit={handleSubmit} className='text-black'>
       <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email" />
       <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Your message"></textarea>
-      <button type="submit">Send</button>
+      <Button type="submit">Send</Button>
     </form>
   );
 }

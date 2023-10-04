@@ -170,7 +170,7 @@ export default function Header({ hide }) {
           rel="noopener noreferrer"
         >
           <Image
-            src="/images/linkedin.svg"
+            src="/logos/linkedin.svg"
             alt="linkedin logo"
             width="25px"
             className="image-rep pt-[3px]"
@@ -184,7 +184,7 @@ export default function Header({ hide }) {
           rel="noopener noreferrer"
         >
           <Image
-            src="/images/githubblack.svg"
+            src="/logos/githubblack.svg"
             alt="github logo"
             width="23px"
             className="image-rep pt-1"

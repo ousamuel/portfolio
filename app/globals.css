@@ -51,6 +51,17 @@ h2 {
   
   /* -webkit-text-stroke: 3px rgb(0, 0, 0); */
 }
+h3{
+  color: rgb(254 243 199);
+  font-weight: 900;
+  font-size: 2rem;
+  padding-bottom:5px;
+  text-align: center;
+}
+h3 li{
+
+  text-align: center;
+}
 p {
   line-height: 1.4;
 }

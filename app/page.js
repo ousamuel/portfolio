@@ -119,6 +119,7 @@ export default function Home() {
         backgroundSize: "cover",
         backgroundColor: "rgb(83,96,118)",
       }}
+      className="flex flex-col items-center"
     >
       <Header hide={hideHeader} />
 
@@ -127,7 +128,7 @@ export default function Home() {
           <p className="opening-slide">Hi, my name is</p>
           <h2 className="opening-slide font-bold text-8xl">Sam</h2>
           <p className="text-4xl mt-4 bio">
-            I&apos;m a web developer from{" "}
+            I&apos;m a creative web developer from{" "}
             <span className="text-red-200">Queens, NY</span>, transitioning away
             from the pre-health track.
           </p>
@@ -197,6 +198,114 @@ export default function Home() {
           />
         </div>
       </div>
+      <div className="w-full px-3 text-lg flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
+        <h1 className="py-5">Technical Skills</h1>
+        <div className="p-5 flex justify-around items-center w-full  ">
+          <ul>
+            <h3>Frontend</h3>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/javascript.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              JavaScript
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/react.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              React
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/nextjs.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              Next.js
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/html.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              Html
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/css.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              CSS/Tailwind
+            </li>
+          </ul>
+          <ul>
+            <h3>Backend</h3>{" "}
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/python.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              Python
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/nodejs.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              Node.js/Express
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/mysql.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              MySQL
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/rest.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              RESTful API
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
+                src="/logos/mongo.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              MongoDB
+            </li>
+          </ul>
+          {/* <ul>
+            <h3>Tools</h3>
+          </ul> */}
+        </div>
+        {/* Front end: html, css js, react, tailwinds, query?? Bootstrap
+Back end: next js mysql, restful api, python
+Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
+ */}
+      </div>
       <div id="about" className="container text-4xl mt-10">
         <div className="welcome-right ">
           <h1 className="pb-2 text-center">Education</h1>
@@ -213,12 +322,12 @@ export default function Home() {
             <li className=" text-xl flex justify-center items-center">
               <Image
                 className="rounded-full m-2.5 w-[38px]"
-                src="/images/flatironlogo.png"
+                src="/logos/flatironlogo.png"
                 alt="sbu-logo"
               />
               Flatiron School
             </li>
-            <li className='flex justify-center items-center'>
+            <li className="flex justify-center items-center">
               <Image
                 className=" h-[300px] sm:h-[450px]  "
                 src="/images/profile.png"
@@ -305,7 +414,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                   >
                     <Image
-                      src="/images/githubblack.svg"
+                      src="/logos/githubblack.svg"
                       alt="github logo"
                       width="25px"
                       className="rounded-none float-right min-w-[25px]"
@@ -321,7 +430,7 @@ export default function Home() {
       <div id="contact-me" className="container">
         {/* Contact */}
         <h1 className="text-2xl">Email me @ samuelou510@gmail.com</h1>
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );
