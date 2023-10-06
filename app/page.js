@@ -272,6 +272,15 @@ export default function Home() {
             <li className="flex items-center">
               <Image
                 className="pr-2 rounded-none"
+                src="/logos/mongo.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              MongoDB
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
                 src="/logos/mysql.svg"
                 width="40px"
                 alt="js-logo"
@@ -286,15 +295,6 @@ export default function Home() {
                 alt="js-logo"
               />
               RESTful API
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/mongo.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              MongoDB
             </li>
           </ul>
           {/* <ul>
@@ -369,13 +369,16 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
           <h1 className="opening-slide pl-6">About me</h1>
           <p className="text-2xl p-6 font-bold lower">
             I am proficient in creating user-friendly websites and specialize in
-            seeking different approaches for backend optimization. <br />
+            seeking different approaches for user optimization. <br />
             <br />
-            After my undergrad at Stony Brook University and working as an EMT
-            and medical assistant, I pivoted towards technology, driven by my
-            strengths in logic and math.
-            <br /> Working in medicine has enhanced my ability to collaborate
-            within a team and adapt quickly to changing circumstances. <br />{" "}
+            I am proficient in JavaScript, React, Next.js, Python,
+            Flask, MySQL, RESTful APIs, Java, HTML, and CSS. I&apos;m also a strong
+            communicator and have demonstrated high adaptability in
+            high-pressure situations from my experience as an EMT & medical
+            assistant at Stony Brook University. My knack for statistics, physics, and
+            logic-related courses led me to enroll in a bootcamp to pursue a
+            comprehensive software engineering education. 
+            <br />
             <br />
             In my free time, I love to cook and find new recipes, go to the gym,
             and spend time with my friends and family.
