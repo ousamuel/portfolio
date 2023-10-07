@@ -371,13 +371,15 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
             I am proficient in creating user-friendly websites and specialize in
             seeking different approaches for user optimization. <br />
             <br />
-            I am proficient in JavaScript, React, Next.js, Python,
-            Flask, MySQL, RESTful APIs, Java, HTML, and CSS. I&apos;m also a strong
-            communicator and have demonstrated high adaptability in
-            high-pressure situations from my experience as an EMT & medical
-            assistant at Stony Brook University. My knack for statistics, physics, and
-            logic-related courses led me to enroll in a bootcamp to pursue a
-            comprehensive software engineering education. 
+            I am proficient in JavaScript, React, Next.js, Python, Flask, MySQL,
+            RESTful APIs, Java, HTML, and CSS.
+            I&apos;m also a strong communicator and have demonstrated high
+            adaptability in high-pressure situations from my experience as an
+            EMT & medical assistant at Stony Brook University.
+            <br />
+            My knack for statistics, physics, and logic-related courses led me
+            to enroll in a bootcamp to pursue a comprehensive software
+            engineering education.
             <br />
             <br />
             In my free time, I love to cook and find new recipes, go to the gym,
@@ -433,7 +435,7 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
       <div id="contact-me" className="container">
         {/* Contact */}
         <h1 className="text-2xl">Email me @ samuelou510@gmail.com</h1>
-        <Contact />
+        {/* <Contact /> */}
       </div>
     </div>
   );
