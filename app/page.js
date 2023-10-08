@@ -313,7 +313,7 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
             <li className=" text-xl flex justify-center items-center ">
               <Image
                 className="m-2 ml-0 w-[40px]"
-                src="/images/sbu.png"
+                src="/logos/sbu.png"
                 alt="sbu-logo"
               />
               Stony Brook University
