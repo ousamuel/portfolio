@@ -263,6 +263,15 @@ export default function Home() {
             <li className="flex items-center">
               <Image
                 className="pr-2 rounded-none"
+                src="/logos/java.svg"
+                width="40px"
+                alt="js-logo"
+              />
+              Java
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
                 src="/logos/nodejs.svg"
                 width="40px"
                 alt="js-logo"
