@@ -228,7 +228,7 @@ export default function Home() {
                 width="40px"
                 alt="ts-logo"
               />
-              React
+              TypeScript
             </li>
             <li className="flex items-center">
               <Image
