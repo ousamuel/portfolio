@@ -34,15 +34,15 @@ export default function Home() {
       github: "https://github.com/ousamuel/fitness-app",
       title: "SteelStance",
       description:
-        "Fullstack fitness application developed using the framework Next.js with a Flask backend. Anonoymous users can view programs and personal records, registered users have access to saving/posting features",
+        "Fitness application developed using the framework Next.js with a Flask backend. Non-registered users can view programs and personal records, registered users have access to saving/posting features",
       src: "/images/steelstance.png",
       live: "https://fitness-app-ousamuel.vercel.app/",
     },
     {
-      github: "https://github.com/ousamuel/Auto-Repair",
+      github: "https://github.com/MarkTocino/PhaseFourAutoDetailProject",
       title: "Auto Shop",
       description:
-        "Fullstack website that provides services, scheduling, and sign-up options. Users can select from a list of offered services and schedule based on available dates/times, sign-up not required.",
+        "Collaborated on a auto-shop website that allows registered and non-registered users to select from a list of offered services and schedule appointments based on available dates/times, and place bids for cars on auction.",
       src: "/images/auto-gallery.png",
     },
     {
@@ -200,9 +200,10 @@ export default function Home() {
       </div>
       <div className="w-full px-3 text-lg flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
         <h1 className="py-5">Technical Skills</h1>
+        <p className='text-xl'> Languages, Frameworks, & Tools</p>
         <div className="p-5 flex justify-around items-center w-full  ">
           <ul>
-            <h3>Frontend</h3>
+            {/* <h3>Frontend</h3> */}
             <li className="flex items-center">
               <Image
                 className="pr-2 rounded-none"
@@ -259,7 +260,7 @@ export default function Home() {
             </li>
           </ul>
           <ul>
-            <h3>Backend</h3>{" "}
+            {/* <h3>Backend</h3>{" "} */}
             <li className="flex items-center">
               <Image
                 className="pr-2 rounded-none"
@@ -389,9 +390,7 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
             I am proficient in creating user-friendly websites and specialize in
             seeking different approaches for user optimization. <br />
             <br />
-            I am proficient in JavaScript, React, Next.js, Python, Flask, MySQL,
-            RESTful APIs, Java, HTML, and CSS.
-            I&apos;m also a strong communicator and have demonstrated high
+            I&apos;m a strong communicator and have demonstrated high
             adaptability in high-pressure situations from my experience as an
             EMT & medical assistant at Stony Brook University.
             <br />
