@@ -224,6 +224,15 @@ export default function Home() {
             <li className="flex items-center">
               <Image
                 className="pr-2 rounded-none"
+                src="/logos/typescript.svg"
+                width="40px"
+                alt="ts-logo"
+              />
+              React
+            </li>
+            <li className="flex items-center">
+              <Image
+                className="pr-2 rounded-none"
                 src="/logos/nextjs.svg"
                 width="40px"
                 alt="js-logo"
