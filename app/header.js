@@ -10,6 +10,7 @@ export default function Header({ hide }) {
 
   const github = "https://github.com/ousamuel";
   const linkedIn = "https://www.linkedin.com/in/samuel-ou-0510s/";
+  const email = "mailto:samuelou510@gmail.com"
   return (
     <nav
       className="navbar px-10"
@@ -84,40 +85,6 @@ export default function Header({ hide }) {
       {/* <h1 className='text-3xl font-bold'>Sam</h1> */}
 
       <div className={isOpen ? "dropdown-menu open " : "dropdown-menu"}>
-        {/* <ul className="socials">
-          <li>
-            <Link
-              color="foreground"
-              className="w-[35px]"
-              href={linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/linkedin.svg"
-                alt="linkedin logo"
-                width="10px"
-                className="image-rep link"
-              />
-            </Link>
-          </li>
-          <li>
-            <Link
-              color="foreground"
-              className="mx-2 w-[35px] rounded-none"
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/github.svg"
-                alt="github logo"
-                width="60px"
-                className="image-rep pt-1 link"
-              />
-            </Link>
-          </li>
-        </ul> */}
         <ul>
           <li>
             <Link
@@ -162,6 +129,21 @@ export default function Header({ hide }) {
         </ul>
       </div>
       <span className="float-right font-bold text-2xl flex">
+        <Link
+          color="foreground"
+          className="mx-2 "
+          href={email}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <Image
+            src="/logos/email.svg"
+            alt="email icon"
+            width="30px"
+            className=""
+          />
+        </Link>
         <Link
           color="foreground"
           className="mx-2 "

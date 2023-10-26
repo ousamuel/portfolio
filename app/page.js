@@ -123,8 +123,8 @@ export default function Home() {
     >
       <Header hide={hideHeader} />
 
-      <div id="welcome" className="container text-7xl flex">
-        <div className="welcome-left">
+      <div id="welcome" className="container text-7xl flex ">
+        <div className="welcome-left my-auto">
           <p className="opening-slide">Hi, my name is</p>
           <h2 className="opening-slide font-bold text-8xl">Sam</h2>
           <p className="text-4xl mt-4 bio">
@@ -190,7 +190,7 @@ export default function Home() {
             </Link> */}
           </span>
         </div>
-        <div className="welcome-right flex flex-col ml-auto mr-auto">
+        <div className="welcome-right flex flex-col m-auto">
           <Image
             src="/images/with-laptop-1.png"
             className="home-logo"
@@ -449,11 +449,9 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
           </Card>
         ))}
       </div>
-      <div id="contact-me" className="container">
-        {/* Contact */}
+      {/* <div id="contact-me" className="container">
         <h1 className="text-2xl">Email me @ samuelou510@gmail.com</h1>
-        {/* <Contact /> */}
-      </div>
+      </div> */}
     </div>
   );
 }
