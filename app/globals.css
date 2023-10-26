@@ -124,17 +124,17 @@ p {
 }
 
 .welcome-left {
-  width: 60%;
+  width: 55%;
   padding-left: 80px;
 }
 .welcome-right {
-  width: 40%;
+  width: 45%;
 }
 .container {
   color: white(0, 0, 0);
   padding: 50px;
   /* font-size: 75px; */
-  padding-top: 100px;
+  /* padding-top: 100px; */
   min-height: 100vh;
   min-width: 100%;
   position: relative;

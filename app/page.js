@@ -43,7 +43,7 @@ export default function Home() {
       title: "Auto Shop",
       description:
         "Collaborated on a auto-shop website that allows registered and non-registered users to select from a list of offered services and schedule appointments based on available dates/times, and place bids for cars on auction.",
-      src: "/images/auto-gallery.png",
+      src: "/images/auto-shop.png",
     },
     {
       github: "https://github.com/ousamuel/Subreddit-Clone",
@@ -52,7 +52,7 @@ export default function Home() {
         "Subreddit clone - single page application. Developed using only vanilla JavaScript, combined with HTML & CSS ",
       src: "/images/subreddit.png",
     },
-  ];
+  ];``
   const [backgroundImage, setBackgroundImage] = useState(
     "url('/images/top-left.png'), url('images/bot-right.png')"
   );
@@ -128,9 +128,9 @@ export default function Home() {
           <p className="opening-slide">Hi, my name is</p>
           <h2 className="opening-slide font-bold text-8xl">Sam</h2>
           <p className="text-4xl mt-4 bio">
-            I&apos;m a creative web developer from{" "}
-            <span className="text-red-200">Queens, NY</span>, transitioning away
-            from the pre-health track.
+            I&apos;m a creative software developer from{" "}
+            <span className="text-red-200">Queens, NY</span>, Crafting
+            Responsive & Intuitive Web Experiences
           </p>
           <span className="flex mt-3 resume">
             {/* <Link
@@ -200,7 +200,7 @@ export default function Home() {
       </div>
       <div className="w-full px-3 text-lg flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
         <h1 className="py-5">Technical Skills</h1>
-        <p className='text-xl'> Languages, Frameworks, & Tools</p>
+        <p className="text-xl"> Languages, Frameworks, & Tools</p>
         <div className="p-5 flex justify-around items-center w-full  ">
           <ul>
             {/* <h3>Frontend</h3> */}
@@ -325,7 +325,7 @@ Back end: next js mysql, restful api, python
 Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
  */}
       </div>
-      <div id="about" className="container text-4xl mt-10">
+      <div id="about" className="container text-4xl sm:mt-10">
         <div className="welcome-right ">
           <h1 className="pb-2 text-center">Education</h1>
           <ul className="edu">
