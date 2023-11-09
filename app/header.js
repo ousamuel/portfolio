@@ -15,8 +15,8 @@ export default function Header({ hide }) {
     <nav
       className="navbar px-10"
       style={{
-        backgroundColor: hide ? "transparent" : "rgb(92, 95, 101)",
-        boxShadow: hide ? null : "0px 5px 20px rgb(62, 65, 70)",
+        backgroundColor: hide ? "transparent" : "#1A2E3A",
+        boxShadow: hide ? null : "0px 5px 20px #1A2E3A",
       }}
     >
       <div

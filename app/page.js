@@ -24,35 +24,40 @@ import Contact from "./Contact";
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  // const { isOpen, setIsOpen } = useContext(Context);
-  const resumeLink =
-    "https://docs.google.com/document/d/1FjXpPvXPx983ZDkfXYzVC8UMfDPKg-qNZn1Rfm4jgQA/preview";
   const github = "https://github.com/ousamuel";
   const linkedIn = "https://www.linkedin.com/in/samuel-ou-0510s/";
   const projects = [
     {
+      github: "https://github.com/ousamuel/Splitwise-clone",
+      title: "Splitwise Clone",
+      description:
+        "(Currently in development)\nTypeScript - Redux - Node/Express - Socket.IO\n• Expense-sharing application that simplifies group finances\n• Users can add bills and debt allocation is automatically calculated",
+      src: "/projects/splitwise.png",
+    },
+    {
       github: "https://github.com/ousamuel/fitness-app",
       title: "SteelStance",
       description:
-        "Fitness application developed using the framework Next.js with a Flask backend. Non-registered users can view programs and personal records, registered users have access to saving/posting features",
-      src: "/images/steelstance.png",
+        "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records with dynamic sorting\n• Registered users have access to saving/posting features",
+      src: "/projects/steelstance.png",
       live: "https://fitness-app-ousamuel.vercel.app/",
     },
     {
       github: "https://github.com/MarkTocino/PhaseFourAutoDetailProject",
       title: "Auto Shop",
       description:
-        "Collaborated on a auto-shop website that allows registered and non-registered users to select from a list of offered services and schedule appointments based on available dates/times, and place bids for cars on auction.",
-      src: "/images/auto-shop.png",
+        "React - Next - Python - Flask - Stripe\n• Automotive application that provides scheduled car servicing and anonymous bidding\n• Integrated Stripe for seamless payments",
+      src: "/projects/auto-shop.png",
     },
     {
       github: "https://github.com/ousamuel/Subreddit-Clone",
-      title: "r/BrewCrew",
+      title: "Subreddit Clone",
       description:
-        "Subreddit clone - single page application. Developed using only vanilla JavaScript, combined with HTML & CSS ",
-      src: "/images/subreddit.png",
+        "JavaScript/HTML/CSS\n• Single-page application allowing users to interact with beer-related posts\n• Implemented sorting and saving options with full CRUD for dynamic post rendering",
+      src: "/projects/subreddit.png",
     },
-  ];``
+  ];
+  ``;
   const [backgroundImage, setBackgroundImage] = useState(
     "url('/images/top-left.png'), url('images/bot-right.png')"
   );
@@ -75,51 +80,18 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollY =
-  //       (window.scrollY + window.innerHeight) /
-  //       document.documentElement.scrollHeight;
-
-  //     if (scrollY < 0.5) {
-  //       setBackgroundImage(
-  //         "url('/images/top-left.png'), url('images/bot-right.png')"
-  //       );
-  //       setBackgroundPosition("right bottom, left top");
-  //     } else if (scrollY >= 0.5 && scrollY < 1) {
-  //       setBackgroundImage(
-  //         "url('/images/bot-left-orange.png'), url('images/top-right-orange.png')"
-  //       );
-  //       setBackgroundPosition("left top, right bottom");
-  //     } else if (scrollY >= 1 && scrollY < 1.5) {
-  //       setBackgroundImage(
-  //         "url('/images/top-left.png'), url('images/bot-right.png')"
-  //       );
-  //       setBackgroundPosition("left top, right bottom");
-  //     } else if (scrollY >= 1.5) {
-  //       setBackgroundImage(
-  //         "url('/images/bot-left-orange.png'), url('images/top-right-orange.png')"
-  //       );
-
-  //       setBackgroundPosition("right bottom, left top");
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   return (
     <div
-      style={{
-        backgroundImage: backgroundImage,
-        backgroundPosition: backgroundPosition,
-        backgroundSize: "cover",
-        backgroundColor: "rgb(83,96,118)",
-      }}
-      className="flex flex-col items-center"
+      style={
+        {
+          // backgroundImage: backgroundImage,
+          // backgroundPosition: backgroundPosition,
+          // backgroundSize: "cover",
+          // backgroundColor: "rgb(83,96,118)",
+        }
+      }
+      className="flex flex-col items-center bg-slate-700"
     >
       <Header hide={hideHeader} />
 
@@ -133,21 +105,6 @@ export default function Home() {
             Responsive & Intuitive Web Experiences
           </p>
           <span className="flex mt-3 resume">
-            {/* <Link
-              className="p-1 link text-xl font-bold text-black bg-amber-100 rounded-small"
-              href={resumeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-              <Image
-                className="rounded-none pl-1"
-                style={{ transform: "translateY(-5px)" }}
-                width="15px"
-                alt="new-window-icon"
-                src="/images/new-window.svg"
-              />
-            </Link> */}
             <Button
               className="resume-pop bg-amber-100 font-bold text-xl"
               onPress={onOpen}
@@ -355,35 +312,6 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
             </li>
           </ul>
         </div>
-        {/* <div className="welcome-right pl-10 items-center justify-center ">
-          <h1 className="pb-2 lg:pl-10">Education</h1>
-          <ul className="edu">
-            <li className=" text-xl flex items-center text-center">
-              <Image
-                className="m-2 ml-0 w-[40px]"
-                src="/images/sbu.png"
-                alt="sbu-logo"
-              />
-              Stony Brook University
-              <br />- B.S. in Biology
-            </li>
-            <li className=" text-xl flex items-center">
-              <Image
-                className="rounded-full m-2.5 w-[38px]"
-                src="/images/flatironlogo.png"
-                alt="sbu-logo"
-              />
-              Flatiron School
-            </li>
-            <li>
-              <Image
-                className=" h-[300px] sm:h-[450px]  "
-                src="/images/profile.png"
-                alt="portrait"
-              />
-            </li>
-          </ul>
-        </div> */}
         <div className="welcome-left about-section">
           <h1 className="opening-slide pl-6">About me</h1>
           <p className="text-2xl p-6 font-bold lower">
@@ -429,7 +357,7 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
               </Link>
               <CardHeader className="pb-0 px-4 flex-col items-start">
                 <small className="text-default-600 w-full flex justify-between items-center">
-                  <p className="font-bold">{project.title}</p>
+                  <strong className="text-black">{project.title}</strong>
                   <Link
                     href={project.github}
                     target="_blank"
@@ -443,7 +371,14 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
                     />
                   </Link>
                 </small>
-                <h4 className="font-bold text-large">{project.description}</h4>
+                <h4 className="font-bold text-large">
+                  {project.description.split("\n").map((item, key) => (
+                    <span key={key}>
+                      {item}
+                      <br />
+                    </span>
+                  ))}
+                </h4>
               </CardHeader>
             </CardBody>
           </Card>
