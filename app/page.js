@@ -31,14 +31,14 @@ export default function Home() {
       github: "https://github.com/ousamuel/Splitwise-clone",
       title: "Splitwise Clone",
       description:
-        "(Currently in development)\nTypeScript - Redux - Node/Express - Socket.IO\n• Expense-sharing application that simplifies group finances\n• Users can add bills and debt allocation is automatically calculated",
+        "TypeScript - Redux - Node/Express - Socket.IO\n• Expense-sharing application that simplifies group finances and debt allocation\n• Users can add bills and payments to calculate distribution",
       src: "/projects/splitwise.png",
     },
     {
       github: "https://github.com/ousamuel/fitness-app",
       title: "SteelStance",
       description:
-        "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records with dynamic sorting\n• Registered users have access to saving/posting features",
+        "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records\n• Registered users have access to saving/posting features",
       src: "/projects/steelstance.png",
       live: "https://fitness-app-ousamuel.vercel.app/",
     },
@@ -50,10 +50,17 @@ export default function Home() {
       src: "/projects/auto-shop.png",
     },
     {
-      github: "https://github.com/ousamuel/Subreddit-Clone",
-      title: "Subreddit Clone",
+      github: "https://github.com/dommieh97/Rainy-Day-Repository",
+      title: "RainyDay",
       description:
-        "JavaScript/HTML/CSS\n• Single-page application allowing users to interact with beer-related posts\n• Implemented sorting and saving options with full CRUD for dynamic post rendering",
+        "JavaScript/HTML/CSS\n• Discord/Pinterest clone that shows posts related to specific communities/channels\n• Users can easily favorite posts ",
+      src: "/projects/rainy-day.png",
+    },
+    {
+      github: "https://github.com/ousamuel/Subreddit-Clone",
+      title: "r/BrewCrew",
+      description:
+        "JavaScript/HTML/CSS\n• Reddit clone allowing users to interact with beer-related posts\n• Implemented sorting and saving options",
       src: "/projects/subreddit.png",
     },
   ];
@@ -99,7 +106,7 @@ export default function Home() {
         <div className="welcome-left my-auto">
           <p className="opening-slide">Hi, my name is</p>
           <h2 className="opening-slide font-bold text-8xl">Sam</h2>
-          <p className="text-4xl mt-4 bio">
+          <p className="text-4xl mt-4 bio w-full">
             I&apos;m a creative software developer from{" "}
             <span className="text-red-200">Queens, NY</span>, Crafting
             Responsive & Intuitive Web Experiences
@@ -150,12 +157,12 @@ export default function Home() {
         <div className="welcome-right flex flex-col m-auto">
           <Image
             src="/images/with-laptop-1.png"
-            className="home-logo"
+            className="home-logo flex m-auto"
             alt="logo"
           />
         </div>
       </div>
-      <div className="w-full px-3 text-lg flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
+      <div className="w-full max-w-[95%] px-3 text-lg flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
         <h1 className="py-5">Technical Skills</h1>
         <p className="text-xl"> Languages, Frameworks, & Tools</p>
         <div className="p-5 flex justify-around items-center w-full  ">
@@ -340,7 +347,7 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
         {projects.map((project) => (
           <Card
             key={project.title}
-            className="rounded-small m-5 py-5 bg-gray-300 max-w-xl project-card"
+            className="rounded-small m-5 py-5 bg-gray-300 w-2xl h-4xl project-card"
           >
             <CardBody className="overflow-visible pt-1 items-center h-auto">
               <Link
@@ -371,7 +378,7 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
                     />
                   </Link>
                 </small>
-                <h4 className="font-bold text-large">
+                <h4 className="font-bold text-large lg:text-xl">
                   {project.description.split("\n").map((item, key) => (
                     <span key={key}>
                       {item}
