@@ -48,6 +48,7 @@ export default function Home() {
       description:
         "React - Next - Python - Flask - Stripe\n• Automotive application that provides scheduled car servicing and anonymous bidding\n• Integrated Stripe for seamless payments",
       src: "/projects/auto-shop.png",
+      live: "https://phase-four-auto-detail-project.vercel.app/",
     },
     {
       github: "https://github.com/dommieh97/Rainy-Day-Repository",
