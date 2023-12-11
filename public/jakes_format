@@ -135,11 +135,19 @@
 \section{Projects}
 \resumeSubHeadingListStart
     \resumeProjectHeading
+        {\textbf{TriviaBurst} $|$ \emph{TypeScript, Angular, Node, Express, MongoDB}}{Dec 2023 -- Present}
+        \resumeItemListStart
+            \resumeItem{Developed a trivia application that provides interactive quizzes and real-time scoring}
+            \resumeItem{Leveraged Angular Material to fast track front end development}
+            \resumeItem{Established data models with MongoDB, incorporating referenced relationships and RESTful endpoints}
+            \resumeItem{Utilized Angular Forms for seamless form validation and management}
+        \resumeItemListEnd
+    \resumeProjectHeading
         {\textbf{CashTrack} $|$ \emph{TypeScript, React Hooks, Node, Express, MongoDB, Socket.IO}}{Nov 2023 -- Present}
         \resumeItemListStart
             \resumeItem{Developed an expense-sharing application that simplifies group finances}
             \resumeItem{Leveraged React Hooks for state and form management}
-              \resumeItem{Established data models with MongoDB, incorporating referenced relationships and RESTful endpoints}
+            \resumeItem{Established data models with MongoDB, incorporating referenced relationships and RESTful endpoints}
             \resumeItem{Utilized Socket.IO for real-time communication between group members}
         \resumeItemListEnd
 
@@ -149,16 +157,15 @@
             \resumeItem{Spearheaded a full-stack application providing scheduled car servicing and anonymous bidding}
             \resumeItem{Optimized table components for teammates, reducing front-end development time by 20\%}
             \resumeItem{Developed backend RESTful API with full CRUD for data management}
-            \resumeItem{Implemented responsive UI to enhance user experience}
-            \resumeItem{Integrated Stripe for seamless scheduling payments}
+            \resumeItem{Led code reviews and standup to discuss challenges and weekly agendas}
         \resumeItemListEnd
   
     \resumeProjectHeading
         {\textbf{SteelStance} $|$ \emph{React, Next, Python, Flask}}{Sep. 2023 -- Oct. 2023}
         \resumeItemListStart
             \resumeItem{Developed a fitness application managing workout programs and personal records}
-            \resumeItem{Created navigation and table components for reusability}
-            \resumeItem{Implemented dynamic sorting of records in a table component, alphanumerically}
+            \resumeItem{Employed SQLAlchemy to establish table relations/relational objects and optimized database queries}
+            \resumeItem{Delivered dynamic sorting algorithm of records in table components}
             \resumeItem{Integrated server-side routing for smooth user experience}
         \resumeItemListEnd
 
@@ -177,7 +184,6 @@
             \resumeItem{Implemented CRUD functionality for dynamic post rendering of API data}
             \resumeItem{Developed sorting and saving options for enhanced user experience}
         \resumeItemListEnd
-\resumeSubHeadingListEnd
 \resumeSubHeadingListEnd
 
 
