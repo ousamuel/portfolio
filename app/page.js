@@ -28,15 +28,15 @@ export default function Home() {
   const linkedIn = "https://www.linkedin.com/in/samuel-ou-0510s/";
   const projects = [
     {
-      github: "https://github.com/ousamuel/Splitwise-clone",
-      title: "Splitwise Clone",
+      github: "https://github.com/ousamuel/cashtrack",
+      title: "CashTrack (In development)",
       description:
-        "TypeScript - Redux - Node/Express - Socket.IO\n• Expense-sharing application that simplifies group finances and debt allocation\n• Users can add bills and payments to calculate distribution",
-      src: "/projects/splitwise.png",
+        "TypeScript - Node/Express - MongoDB - Socket.IO\n• Expense-sharing application that simplifies group finances inspired by Splitwise\n• Users can add bills and payments to calculate distribution",
+      src: "/projects/cashtrack.png",
     },
     {
       github: "https://github.com/ousamuel/fitness-app",
-      title: "SteelStance",
+      title: "SteelStance (Deployed)",
       description:
         "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records\n• Registered users have access to saving/posting features",
       src: "/projects/steelstance.png",
@@ -44,7 +44,7 @@ export default function Home() {
     },
     {
       github: "https://github.com/MarkTocino/PhaseFourAutoDetailProject",
-      title: "Auto Shop",
+      title: "Auto Shop (Deployed)",
       description:
         "React - Next - Python - Flask - Stripe\n• Automotive application that provides scheduled car servicing and anonymous bidding\n• Integrated Stripe for seamless payments",
       src: "/projects/auto-shop.png",
@@ -341,6 +341,7 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
         </div>
       </div>
       <h1>Projects</h1>
+      <p className='text-2xl'>{"Deployed applications are viewable by clicking on the image"}</p>
       <div
         id="projects"
         className="container text-5xl items-center justify-center"
