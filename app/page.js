@@ -29,7 +29,7 @@ export default function Home() {
   const projects = [
     {
       github: "https://github.com/ousamuel/cashtrack",
-      title: "CashTrack (In development)",
+      title: "CashTrack (Click for Demo)",
       description:
         "TypeScript - Node/Express - MongoDB - Socket.IO\n• Expense-sharing application that simplifies group finances inspired by Splitwise\n• Users can add bills and payments to calculate distribution",
       src: "/projects/cashtrack.png",
