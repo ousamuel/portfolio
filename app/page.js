@@ -33,6 +33,7 @@ export default function Home() {
       description:
         "TypeScript - Node/Express - MongoDB - Socket.IO\n• Expense-sharing application that simplifies group finances inspired by Splitwise\n• Users can add bills and payments to calculate distribution",
       src: "/projects/cashtrack.png",
+      live: "https://www.loom.com/share/a811ea6664ad44ea8a67e11eb4f71439",
     },
     {
       github: "https://github.com/ousamuel/fitness-app",
@@ -341,7 +342,9 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
         </div>
       </div>
       <h1>Projects</h1>
-      <p className='text-2xl'>{"Deployed applications are viewable by clicking on the image"}</p>
+      <p className="text-2xl">
+        {"Deployed applications are viewable by clicking on the image"}
+      </p>
       <div
         id="projects"
         className="container text-5xl items-center justify-center"

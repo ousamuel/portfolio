@@ -186,6 +186,17 @@
         \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+%-----------PROJECTS-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{EMT} $|$ \emph{Ambulnz}}{Feb. 2022 -- Dec. 2022}
+        \resumeItemListStart
+           \resumeItem{Delivered basic life support and transportation for emergent and non-emergent patients}
+            \resumeItem{Demonstrated critical thinking and swift decision-making in high-pressure situations}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
 
 
 %
