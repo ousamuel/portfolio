@@ -114,7 +114,7 @@
 \begin{center}
     \textbf{\Huge \scshape Samuel Ou} \\ \vspace{1pt}
     \small \href{mailto:samuelou510@gmail.com}{\underline{samuelou510@gmail.com}} $|$ 
-    \href{https://linkedin.com/in/samuelou510s}{\underline{linkedin.com/in/samuelou510s}} $|$
+    \href{https://www.linkedin.com/in/samuel-ou-0510s/}{\underline{linkedin.com/in/samuel-ou-0510s/}} $|$
     \href{https://github.com/ousamuel}{\underline{github.com/ousamuel}}
 \end{center}
 
@@ -143,7 +143,7 @@
             \resumeItem{Utilized Angular Forms for seamless form validation and management}
         \resumeItemListEnd
     \resumeProjectHeading
-        {\textbf{CashTrack} $|$ \emph{TypeScript, React Hooks, Node, Express, MongoDB, Socket.IO}}{Nov 2023 -- Present}
+        {\textbf{CashTrack} $|$ \emph{TypeScript, React Hooks, Node, Express, MongoDB, Socket.IO}}{Nov 2023 -- Jan 2024}
         \resumeItemListStart
             \resumeItem{Developed an expense-sharing application that simplifies group finances}
             \resumeItem{Leveraged React Hooks for state and form management}
@@ -152,7 +152,7 @@
         \resumeItemListEnd
 
     \resumeProjectHeading
-        {\textbf{Auto Shop} $|$ \emph{React, Next, Python, Flask, Stripe}}{Oct. 2023 -- Nov. 2023}
+        {\textbf{Auto Service/Commerce} $|$ \emph{React, Next, Python, Flask, Stripe}}{Oct. 2023 -- Nov. 2023}
         \resumeItemListStart
             \resumeItem{Spearheaded a full-stack application providing scheduled car servicing and anonymous bidding}
             \resumeItem{Optimized table components for teammates, reducing front-end development time by 20\%}
@@ -177,24 +177,45 @@
             \resumeItem{Implemented custom styling and design for the user interface}
         \resumeItemListEnd
 
-    \resumeProjectHeading
-        {\textbf{Subreddit Clone} $|$ \emph{JavaScript, React, Reddit API}}{Jul. 2023 -- Aug. 2023}
-        \resumeItemListStart
-            \resumeItem{Developed a single-page application allowing users to view and interact with beer-related posts}
-            \resumeItem{Implemented CRUD functionality for dynamic post rendering of API data}
-            \resumeItem{Developed sorting and saving options for enhanced user experience}
-        \resumeItemListEnd
+    % \resumeProjectHeading
+    %     {\textbf{Subreddit Clone} $|$ \emph{JavaScript, React, Reddit API}}{Jul. 2023 -- Aug. 2023}
+    %     \resumeItemListStart
+    %         \resumeItem{Developed a single-page application allowing users to view and interact with beer-related posts}
+    %         \resumeItem{Implemented CRUD functionality for dynamic post rendering of API data}
+    %         \resumeItem{Developed sorting and saving options for enhanced user experience}
+    %     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+% Statistics & Chemistry Teaching Assistant at Stony Brook University			Jan 2022 - May 2023
+% After-school teacher at FBC Summer Day Camp			Jun 2021 - Aug 2021
+% Private tutor for Middle & High school students
+\section{Licenses/Certifications}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{JPMC - SWE Virtual Experience} $|$ \emph{Forage}}{Jan 2024}
+        \resumeItemListStart
+           \resumeItem{Fixed broken files in the repository to make web application output correctly}
+            \resumeItem{Used JPMorgan Chase’s open source library called Perspective to generate a
+            live graph that displays a data feed in a clear and visually appealing way
+            for traders to monitor}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
 %-----------PROJECTS-----------
 \section{Work Experience}
 \resumeSubHeadingListStart
     \resumeProjectHeading
-        {\textbf{EMT} $|$ \emph{Ambulnz}}{Feb. 2022 -- Dec. 2022}
+        {\textbf{Teacher/TA} $|$ \emph{Multiple Positions}}{2016 - 2022}
         \resumeItemListStart
-           \resumeItem{Delivered basic life support and transportation for emergent and non-emergent patients}
-            \resumeItem{Demonstrated critical thinking and swift decision-making in high-pressure situations}
+           \resumeItem{Statistics and Chemistry Teaching Assistant at Stony Brook University}
+            \resumeItem{After-school Teacher}
+            \resumeItem{Private tutor for Physics/AP Calculus}
         \resumeItemListEnd
+        %  {\textbf{EMT, Medical Scribe, Medical Assistant} $|$ \emph{Various}}{Feb. 2018 -- Dec. 2022}
+        % \resumeItemListStart
+        %    \resumeItem{Delivered basic life support and transportation for emergent and non-emergent patients}
+        %     \resumeItem{Scribed for in-person visits and telehealth}
+        %     \resumeItem{Updated patient information and medical history, and organized vaccine administration for pediatric patients}
+        % \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 
@@ -206,7 +227,8 @@
     \small{\item{
      \textbf{Languages}{: JavaScript, TypeScript, Python, Java, HTML/CSS} \\
      \textbf{Frameworks}{: React, Next, Node, Express, Flask, Tailwind} \\
-     \textbf{Developer Tools}{: VS Code, Git, MySQL, MongoDB}
+     \textbf{Developer Tools}{: VS Code, Git, MySQL, MongoDB} \\
+     % \textbf{Typing Speed}{: 100+ wpm}
     }}
  \end{itemize}
 
