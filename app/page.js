@@ -47,7 +47,7 @@ export default function Home() {
       github: "https://github.com/ousamuel/fitness-app",
       title: "SteelStance (Deployed)",
       description:
-        "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records\n• Registered users have access to saving/posting features",
+        "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records\n• Utilized SQLAlchemy ORM to interact with the database, ensuring data integrity and efficient storage",
       src: "/projects/steelstance.png",
       live: "https://fitness-app-ousamuel.vercel.app/",
     },
@@ -55,7 +55,7 @@ export default function Home() {
       github: "https://github.com/MarkTocino/PhaseFourAutoDetailProject",
       title: "Auto Shop (Deployed)",
       description:
-        "React - Next - Python - Flask - Stripe\n• Automotive application that provides scheduled car servicing and anonymous bidding\n• Integrated Stripe for seamless payments",
+        "React - Next - Python - Flask - Stripe\n• Automotive application that provides scheduled car servicing and anonymous bidding\n• Implemented user authentication and authorization features using Flask-Login",
       src: "/projects/auto-shop.png",
       live: "https://phase-four-auto-detail-project.vercel.app/",
     },
@@ -341,8 +341,8 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
             <br />
             Post-graduation, I&apos;ve continued to grow my coding skills in:
             data structures/algorithms, SQL and NoSQL databases managed with
-            ORM/ODMs, Context API + React Hooks for state management, and custom web
-            development.
+            ORM/ODMs, Context API + React Hooks for state management, and custom
+            web development.
             <br />
             <br />
             <span className="text-orange-500">Current Position: </span>
