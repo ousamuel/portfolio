@@ -28,12 +28,20 @@ export default function Home() {
   const linkedIn = "https://www.linkedin.com/in/samuel-ou-0510s/";
   const projects = [
     {
-      github: "https://github.com/ousamuel/cashtrack",
-      title: "CashTrack (Click for Demo)",
+      github: "https://github.com/ousamuel/E-Commerce",
+      title: "eCommerce Platform (In Dev)",
       description:
-        "TypeScript - Node/Express - MongoDB - Socket.IO\n• Expense-sharing application that simplifies group finances inspired by Splitwise\n• Users can add bills and payments to calculate distribution",
+        "TypeScript - AWS Lambda/Cognito - DynamoDB\n• Implemented end-to-end features, ensuring web and mobile-friendly experience\n• Optimized cloud infrastructure on AWS, incorporating server-less architecture with AWS Lambda",
+      src: "/projects/ecommerce.png",
+      // live: "https://main.d3pzfughhwvxcj.amplifyapp.com/",
+    },
+    {
+      github: "https://github.com/ousamuel/cashtrack",
+      title: "CashTrack (Deployed)",
+      description:
+        "TypeScript - Node/Express - MongoDB\n• Expense-sharing application that simplifies group finances inspired by Splitwise\n• Users can add bills and payments to calculate distribution",
       src: "/projects/cashtrack.png",
-      live: "https://www.loom.com/share/a811ea6664ad44ea8a67e11eb4f71439",
+      live: "https://main.d3pzfughhwvxcj.amplifyapp.com/",
     },
     {
       github: "https://github.com/ousamuel/fitness-app",
@@ -100,16 +108,16 @@ export default function Home() {
           // backgroundColor: "rgb(83,96,118)",
         }
       }
-      className="flex flex-col items-center bg-slate-700"
+      className="flex flex-col items-center bg-slate-700 source-sans"
     >
       <Header hide={hideHeader} />
 
-      <div id="welcome" className="container text-7xl flex ">
+      <div id="welcome" className="container text-6xl flex ">
         <div className="welcome-left my-auto">
           <p className="opening-slide">Hi, my name is</p>
           <h2 className="opening-slide font-bold text-8xl">Sam</h2>
-          <p className="text-4xl mt-4 bio w-full">
-            I&apos;m a creative software developer from{" "}
+          <p className="mt-4 bio w-full">
+            I&apos;m a Web & Systems Engineer from{" "}
             <span className="text-red-200">Queens, NY</span>, Crafting
             Responsive & Intuitive Web Experiences
           </p>
@@ -164,10 +172,10 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="w-full max-w-[95%] px-3 text-lg flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
+      <div className="w-full max-w-[95%] px-3 text-md flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
         <h1 className="py-5">Technical Skills</h1>
         <p className="text-xl"> Languages, Frameworks, & Tools</p>
-        <div className="p-5 flex justify-around items-center w-full  ">
+        <div className="p-5 flex justify-around items-center w-full text-[20px]">
           <ul>
             {/* <h3>Frontend</h3> */}
             <li className="flex items-center">
@@ -213,7 +221,7 @@ export default function Home() {
                 width="40px"
                 alt="js-logo"
               />
-              Html
+              HTML
             </li>
             <li className="flex items-center">
               <Image
@@ -266,11 +274,11 @@ export default function Home() {
             <li className="flex items-center">
               <Image
                 className="pr-2 rounded-none"
-                src="/logos/mysql.svg"
+                src="/logos/sql.svg"
                 width="40px"
                 alt="js-logo"
               />
-              MySQL
+              SQL & NoSQL
             </li>
             <li className="flex items-center">
               <Image
@@ -323,17 +331,25 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
         </div>
         <div className="welcome-left about-section">
           <h1 className="opening-slide pl-6">About me</h1>
-          <p className="text-2xl p-6 font-bold lower">
-            I am proficient in creating user-friendly websites and specialize in
-            seeking different approaches for user optimization. <br />
+          <p className="text-lg p-6 lower">
+            I&apos;m a graduate from{" "}
+            <span className="text-red-400">Stony Brook University</span> and{" "}
+            <span className="text-sky-400"> Flatiron Bootcamp</span> <br />
             <br />
-            I&apos;m a strong communicator and have demonstrated high
-            adaptability in high-pressure situations from my experience as an
-            EMT & medical assistant at Stony Brook University.
+            I&apos;m proficient in JavaScript, React, TypeScript, Node/Express,
+            and Python/Flask.
             <br />
-            My knack for statistics, physics, and logic-related courses led me
-            to enroll in a bootcamp to pursue a comprehensive software
-            engineering education.
+            Post-graduation, I&apos;ve continued to grow my coding skills in:
+            data structures/algorithms, SQL and NoSQL databases managed with
+            ORM/ODMs, Context API + React Hooks for state management, and custom web
+            development.
+            <br />
+            <br />
+            <span className="text-orange-500">Current Position: </span>
+            Freelance developer for an eCommerce platform created in TypeScript
+            and AWS, leveraging my expertise in full-stack development to ensure
+            seamless integration of user interfaces, efficient backend
+            functionalities, and secure cloud-based solutions.
             <br />
             <br />
             In my free time, I love to cook and find new recipes, go to the gym,
@@ -342,12 +358,12 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
         </div>
       </div>
       <h1>Projects</h1>
-      <p className="text-2xl">
+      <p className="text-lg">
         {"Deployed applications are viewable by clicking on the image"}
       </p>
       <div
         id="projects"
-        className="container text-5xl items-center justify-center"
+        className="container text-3xl items-center justify-center"
       >
         {projects.map((project) => (
           <Card
@@ -383,7 +399,7 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
                     />
                   </Link>
                 </small>
-                <h4 className="font-bold text-large lg:text-xl">
+                <h4 className="text-sm">
                   {project.description.split("\n").map((item, key) => (
                     <span key={key}>
                       {item}
