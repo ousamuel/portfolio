@@ -117,9 +117,9 @@ export default function Home() {
           <p className="opening-slide">Hi, my name is</p>
           <h2 className="opening-slide font-bold text-8xl">Sam</h2>
           <p className="mt-4 bio w-full">
-            I&apos;m a Web & Systems Engineer from{" "}
-            <span className="text-red-200">Queens, NY</span>, Crafting
-            Responsive & Intuitive Web Experiences
+            I&apos;m a Software Engineer from{" "}
+            <span className="text-red-200">Queens, NY</span> <br></br>
+            Delivering Creative Technical Solutions & Web Experiences
           </p>
           <span className="flex mt-3 resume">
             <Button
@@ -274,11 +274,11 @@ export default function Home() {
             <li className="flex items-center">
               <Image
                 className="pr-2 rounded-none"
-                src="/logos/sql.svg"
+                src="/logos/postgres.svg"
                 width="40px"
                 alt="js-logo"
               />
-              SQL & NoSQL
+              PostgreSQL 
             </li>
             <li className="flex items-center">
               <Image
