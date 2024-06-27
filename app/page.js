@@ -21,66 +21,16 @@ import { Context } from "./providers";
 import { useRouter } from "next/navigation";
 import Header from "./header";
 import Contact from "./Contact";
+import Certs from "./Certs";
+import SkillsList from "./Skills";
+import { projects } from "./Projects";
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const github = "https://github.com/ousamuel";
   const linkedIn = "https://www.linkedin.com/in/samuel-ou-0510s/";
-  const projects = [
-    {
-      github: "https://github.com/ousamuel/E-Commerce",
-      title: "eCommerce Platform (In Dev)",
-      description:
-        "TypeScript - AWS Lambda/Cognito - DynamoDB\n• Implemented end-to-end features, ensuring web and mobile-friendly experience\n• Optimized cloud infrastructure on AWS, incorporating server-less architecture with AWS Lambda",
-      src: "/projects/ecommerce.png",
-      // live: "https://main.d3pzfughhwvxcj.amplifyapp.com/",
-    },
-    {
-      github: "https://github.com/ousamuel/cashtrack",
-      title: "CashTrack (Deployed)",
-      description:
-        "TypeScript - Node/Express - MongoDB\n• Expense-sharing application that simplifies group finances inspired by Splitwise\n• Users can add bills and payments to calculate distribution",
-      src: "/projects/cashtrack.png",
-      live: "https://main.d3pzfughhwvxcj.amplifyapp.com/",
-    },
-    {
-      github: "https://github.com/ousamuel/fitness-app",
-      title: "SteelStance (Deployed)",
-      description:
-        "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records\n• Utilized SQLAlchemy ORM to interact with the database, ensuring data integrity and efficient storage",
-      src: "/projects/steelstance.png",
-      live: "https://fitness-app-ousamuel.vercel.app/",
-    },
-    {
-      github: "https://github.com/MarkTocino/PhaseFourAutoDetailProject",
-      title: "Auto Shop (Deployed)",
-      description:
-        "React - Next - Python - Flask - Stripe\n• Automotive application that provides scheduled car servicing and anonymous bidding\n• Implemented user authentication and authorization features using Flask-Login",
-      src: "/projects/auto-shop.png",
-      live: "https://phase-four-auto-detail-project.vercel.app/",
-    },
-    {
-      github: "https://github.com/dommieh97/Rainy-Day-Repository",
-      title: "RainyDay",
-      description:
-        "JavaScript/HTML/CSS\n• Discord/Pinterest clone that shows posts related to specific communities/channels\n• Users can easily favorite posts ",
-      src: "/projects/rainy-day.png",
-    },
-    {
-      github: "https://github.com/ousamuel/Subreddit-Clone",
-      title: "r/BrewCrew",
-      description:
-        "JavaScript/HTML/CSS\n• Reddit clone allowing users to interact with beer-related posts\n• Implemented sorting and saving options",
-      src: "/projects/subreddit.png",
-    },
-  ];
+
   ``;
-  const [backgroundImage, setBackgroundImage] = useState(
-    "url('/images/top-left.png'), url('images/bot-right.png')"
-  );
-  const [backgroundPosition, setBackgroundPosition] = useState(
-    "right bottom, left top"
-  );
   const [hideHeader, setHideHeader] = useState(true);
   useEffect(() => {
     function handleScroll() {
@@ -175,129 +125,7 @@ export default function Home() {
       <div className="w-full max-w-[95%] px-3 text-md flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
         <h1 className="py-5">Technical Skills</h1>
         <p className="text-xl"> Languages, Frameworks, & Tools</p>
-        <div className="p-5 flex justify-around items-center w-full text-[20px]">
-          <ul>
-            {/* <h3>Frontend</h3> */}
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/javascript.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              JavaScript
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/react.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              React
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/typescript.svg"
-                width="40px"
-                alt="ts-logo"
-              />
-              TypeScript
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/nextjs.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              Next.js
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/html.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              HTML
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/css.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              CSS/Tailwind
-            </li>
-          </ul>
-          <ul>
-            {/* <h3>Backend</h3>{" "} */}
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/python.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              Python
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/java.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              Java
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/nodejs.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              Node.js/Express
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/mongo.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              MongoDB
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/postgres.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              PostgreSQL 
-            </li>
-            <li className="flex items-center">
-              <Image
-                className="pr-2 rounded-none"
-                src="/logos/rest.svg"
-                width="40px"
-                alt="js-logo"
-              />
-              RESTful API
-            </li>
-          </ul>
-          {/* <ul>
-            <h3>Tools</h3>
-          </ul> */}
-        </div>
-        {/* Front end: html, css js, react, tailwinds, query?? Bootstrap
-Back end: next js mysql, restful api, python
-Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
- */}
+        <SkillsList />
       </div>
       <div id="about" className="container text-4xl sm:mt-10">
         <div className="welcome-right ">
@@ -310,7 +138,6 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
                 alt="sbu-logo"
               />
               Stony Brook University
-              <br />- B.S. in Biology
             </li>
             <li className=" text-xl flex justify-center items-center">
               <Image
@@ -336,29 +163,35 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
             <span className="text-red-400">Stony Brook University</span> and{" "}
             <span className="text-sky-400"> Flatiron Bootcamp</span> <br />
             <br />
-            I&apos;m proficient in JavaScript, React, TypeScript, Node/Express,
-            and Python/Flask.
-            <br />
-            Post-graduation, I&apos;ve continued to grow my coding skills in:
-            data structures/algorithms, SQL and NoSQL databases managed with
-            ORM/ODMs, Context API + React Hooks for state management, and custom
-            web development.
+            As a developer, I specialize in solving technical problems, finding
+            the most creative and efficient solutions that also provide valuable
+            learning experiences. My passion lies in constant learning and
+            growing my craftsmanship in software.
             <br />
             <br />
-            <span className="text-orange-500">Current Position: </span>
-            Freelance developer for an eCommerce platform created in TypeScript
-            and AWS, leveraging my expertise in full-stack development to ensure
-            seamless integration of user interfaces, efficient backend
-            functionalities, and secure cloud-based solutions.
+            <span className="text-orange-500">
+              &quot;What single accomplishment are you most proud of?&quot;
+            </span>
+            <br />
+            I&apos;m most proud of my growth as a person. When I was younger, I
+            used to be quite hot-headed and stubborn, which often led to
+            conflicts between me and my peers. Fortunately, I was able to turn
+            myself around, but this accomplishment was not a solo
+            accomplishment; surrounding myself with the right people is what
+            pushed me to become more open-minded and patient. These traits
+            branched out into every aspect of my life, whether it was talking to
+            friends/strangers or finding solutions to fix my code. I&apos;m
+            proud of who I&apos;ve become and am excited to keep growing.
             <br />
             <br />
-            In my free time, I love to cook and find new recipes, go to the gym,
-            and spend time with my friends and family.
+            Fun fact about me: After years of playing pool, I succesfully
+            learned how to juggle.
           </p>
         </div>
       </div>
+
       <h1>Projects</h1>
-      <p className="text-lg">
+      <p className="px-4 text-center text-lg">
         {"Deployed applications are viewable by clicking on the image"}
       </p>
       <div
@@ -415,6 +248,37 @@ Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
       {/* <div id="contact-me" className="container">
         <h1 className="text-2xl">Email me @ samuelou510@gmail.com</h1>
       </div> */}
+
+      <h1>Certifications</h1>
+      <div
+        id="certifications"
+        className="container c2 text-3xl items-center justify-center"
+      >
+        {Certs.map((cert) => (
+          <Card
+            key={cert.title}
+            className="rounded-none m-5 py-5 bg-gray-300 w-2xl h-4xl project-card"
+          >
+            <CardBody className="overflow-visible pt-1 items-center h-auto">
+              <CardHeader className="pb-0 px-4 flex-col items-start">
+                <small className="text-default-600 w-full flex justify-between items-center">
+                  <strong className="text-black flex justify-between">
+                    {cert.title}
+                  </strong>
+                  <Image
+                    alt={cert.title + "image"}
+                    className="rounded flex"
+                    src={cert.image}
+                    width={40}
+                  />
+                </small>
+                <span className="text-sm text-gray-500">{cert.date_id}</span>
+                <span className="text-sm">{cert.desc}</span>
+              </CardHeader>{" "}
+            </CardBody>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

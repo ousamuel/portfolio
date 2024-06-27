@@ -149,6 +149,9 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
+.c2{
+  padding:20px;
+}
 #projects {
   padding-top: 0px;
 }
