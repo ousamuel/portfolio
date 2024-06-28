@@ -184,7 +184,7 @@ export default function Home() {
             proud of who I&apos;ve become and am excited to keep growing.
             <br />
             <br />
-            Fun fact about me: After years of playing pool, I succesfully
+            Fun fact about me: After years of playing pool, I successfully
             learned how to juggle.
           </p>
         </div>
