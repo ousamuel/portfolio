@@ -16,7 +16,7 @@ const projects = [
     live: "https://main.d3pzfughhwvxcj.amplifyapp.com/",
   },
   {
-    github: "https://github.com/ousamuel/fitness-app",
+    github: "https://github.com/ousamuel/SteelStance",
     title: "SteelStance (Deployed)",
     description:
       "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records\n• Utilized SQLAlchemy ORM to interact with the database, ensuring data integrity and efficient storage",
