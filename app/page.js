@@ -17,6 +17,11 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import { Context } from "./providers";
 import { useRouter } from "next/navigation";
 import Header from "./header";
@@ -190,9 +195,49 @@ export default function Home() {
         </div>
       </div>
 
+      <h1>Experience</h1>
+
+      <VerticalTimeline>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "#000000", color: "#00e4b3" }}
+          contentArrowStyle={{ borderRight: "7px solid  #000000" }}
+          date="Jul 2024 - present"
+          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          icon={
+            <Image
+              src="/images/headstarter.jpg"
+              className="rounded-full"
+              alt="headstarter"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title text-white">
+            Software Engineering Fellow
+          </h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            <a
+              className="underline"
+              target="_blank"
+              href="https://www.linkedin.com/company/headstarterai/mycompany/"
+            >
+              @ Headstarter AI
+            </a>
+          </h4>
+          <p>
+            • Building 5+ AI apps using NextJS, OpenAI, Pinecone, StripeAPI with
+            98% model accuracy, verified by 1000+ users <br />
+            • Developed projects from design to deployment leading other
+            engineering fellows using MVC design patterns <br />• Coached by
+            Amazon, Bloomberg, and Capital One engineers on Agile, CI/CD, Git,
+            and microservice patterns{" "}
+          </p>
+        </VerticalTimelineElement>
+      </VerticalTimeline>
+
       <h1>Projects</h1>
       <p className="px-4 text-center text-lg">
-        {"Deployed applications are viewable by clicking on the image"}
+        {"Video demos are viewable by clicking on the image"}
       </p>
       <div
         id="projects"
