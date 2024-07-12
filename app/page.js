@@ -164,7 +164,7 @@ export default function Home() {
         <div className="welcome-left about-section">
           <h1 className="opening-slide pl-6">About me</h1>
           <p className="text-lg p-6 lower">
-            I&apos;m a graduate from{" "}
+            My name is Samuel Ou and I am a graduate from{" "}
             <span className="text-red-400">Stony Brook University</span> and{" "}
             <span className="text-sky-400"> Flatiron Bootcamp</span> <br />
             <br />
