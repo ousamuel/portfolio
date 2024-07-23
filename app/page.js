@@ -63,7 +63,7 @@ export default function Home() {
           // backgroundColor: "rgb(83,96,118)",
         }
       }
-      className="flex flex-col items-center bg-slate-700 source-sans"
+      className="flex flex-col items-center bg-slate-400 source-sans"
     >
       <Header hide={hideHeader} />
 
@@ -129,7 +129,7 @@ export default function Home() {
       </div>
       <div className="w-full max-w-[95%] px-3 text-md flex flex-col items-center justify-center border-t border-b border-solid border-amber-100 sm:w-3/5 sm:text-3xl">
         <h1 className="py-5">Technical Skills</h1>
-        <p className="text-xl"> Languages, Frameworks, & Tools</p>
+        <p className="text-xl"> Languages, Frameworks, Libraries, Tools</p>
         <SkillsList />
       </div>
       <div id="about" className="container text-4xl sm:mt-10">
@@ -164,9 +164,9 @@ export default function Home() {
         <div className="welcome-left about-section">
           <h1 className="opening-slide pl-6">About me</h1>
           <p className="text-lg p-6 lower">
-            My name is Samuel Ou and I am a graduate from{" "}
-            <span className="text-red-400">Stony Brook University</span> and{" "}
-            <span className="text-sky-400"> Flatiron Bootcamp</span> <br />
+            My name is <span className='text-black'>Samuel Ou</span> and I am a graduate from{" "}
+            <span className="text-red-600">Stony Brook University</span> and{" "}
+            <span className="text-blue-600"> Flatiron Bootcamp</span> <br />
             <br />
             As a developer, I specialize in solving technical problems, finding
             the most creative and efficient solutions that also provide valuable
@@ -174,7 +174,7 @@ export default function Home() {
             growing my craftsmanship in software.
             <br />
             <br />
-            <span className="text-orange-500">
+            <span className="text-black">
               &quot;What single accomplishment are you most proud of?&quot;
             </span>
             <br />
@@ -235,7 +235,7 @@ export default function Home() {
         </VerticalTimelineElement>
       </VerticalTimeline>
 
-      <h1>Projects</h1>
+      <h1 className='mt-4'>Projects</h1>
       <p className="px-4 text-center text-lg">
         {"Video demos are viewable by clicking on the image"}
       </p>

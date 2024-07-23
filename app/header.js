@@ -15,12 +15,12 @@ export default function Header({ hide }) {
     <nav
       className="navbar px-10"
       style={{
-        backgroundColor: hide ? "transparent" : "#1A2E3A",
+        backgroundColor: hide ? "transparent" : "rgb(148 163 184)",
         boxShadow: hide ? null : "0px 5px 20px #1A2E3A",
       }}
     >
       <div
-        className="flex pt-3 dropbox"
+        className="flex pt-1 dropbox"
         onClick={() => setIsOpen((prevstate) => !prevstate)}
       >
         <div className={isOpen ? "dropdown open " : "dropdown pr-2}"}>

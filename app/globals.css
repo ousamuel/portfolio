@@ -224,7 +224,7 @@ p {
 .dropdown-menu.open {
   font-size: 50px;
   position: fixed;
-  background-color: #1a2e3a;
+  background-color: rgb(148 163 184);
   backface-visibility: hidden;
   z-index: -100000;
   top: 0;
