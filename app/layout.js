@@ -6,6 +6,8 @@ import * as React from "react";
 import { NextUIProvider } from "@nextui-org/react";
 import { Providers, Context } from "./providers";
 import GoogleAnalytics from "./GoogleAnalytics";
+import { GoogleTagManager } from '@next/third-parties/google'
+
 export default function RootLayout({ children }) {
   const { isOpen, setIsOpen } = useContext(Context);
 
@@ -23,7 +25,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@800;700&display=swap"
           rel="stylesheet"
         />
-        <GoogleAnalytics />
+      <GoogleTagManager gtmId="G-6PVQ9726CR" />
       </head>
 
       <body>
