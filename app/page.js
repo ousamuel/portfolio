@@ -54,17 +54,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      style={
-        {
-          // backgroundImage: backgroundImage,
-          // backgroundPosition: backgroundPosition,
-          // backgroundSize: "cover",
-          // backgroundColor: "rgb(83,96,118)",
-        }
-      }
-      className="flex flex-col items-center bg-slate-400 source-sans"
-    >
+    <div className="flex flex-col items-center bg-slate-400 source-sans">
       <Header hide={hideHeader} />
 
       <div id="welcome" className="container text-6xl flex ">
@@ -164,7 +154,8 @@ export default function Home() {
         <div className="welcome-left about-section">
           <h1 className="opening-slide pl-6">About me</h1>
           <p className="text-lg p-6 lower">
-            My name is <span className='text-black'>Samuel Ou</span> and I am a graduate from{" "}
+            My name is <span className="text-black">Samuel Ou</span> and I am a
+            graduate from{" "}
             <span className="text-red-600">Stony Brook University</span> and{" "}
             <span className="text-blue-600"> Flatiron Bootcamp</span> <br />
             <br />
@@ -196,9 +187,9 @@ export default function Home() {
       </div>
 
       <h1>Experience</h1>
-
       <VerticalTimeline>
         <VerticalTimelineElement
+          visible={true}
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#000000", color: "#00e4b3" }}
           contentArrowStyle={{ borderRight: "7px solid  #000000" }}
@@ -235,18 +226,18 @@ export default function Home() {
         </VerticalTimelineElement>
       </VerticalTimeline>
 
-      <h1 className='mt-4'>Projects</h1>
+      <h1 className="mt-4">Projects</h1>
       <p className="px-4 text-center text-lg">
         {"Video demos are viewable by clicking on the image"}
       </p>
       <div
         id="projects"
-        className="container text-3xl items-center justify-center"
+        className="container text-3xl items-stretch justify-center"
       >
         {projects.map((project) => (
           <Card
             key={project.title}
-            className="rounded-small m-5 py-5 bg-gray-300 w-2xl h-4xl project-card"
+            className="rounded-small m-5 py-5 bg-gray-300 project-card "
           >
             <CardBody className="overflow-visible pt-1 items-center h-auto">
               <Link
@@ -256,7 +247,7 @@ export default function Home() {
               >
                 <Image
                   alt={project.title + "image"}
-                  className="object-cover rounded-none max-w-2xl "
+                  className="object-cover rounded-none max-w-2xl h-xl"
                   src={project.src}
                   width="100%"
                 />
@@ -273,17 +264,17 @@ export default function Home() {
                       src="/logos/githubblack.svg"
                       alt="github logo"
                       width="25px"
-                      className="rounded-none float-right min-w-[25px]"
+                      className="rounded-full float-right min-w-[25px] hover:bg-blue-600"
                     />
                   </Link>
                 </small>
                 <h4 className="text-sm">
-                  {project.description.split("\n").map((item, key) => (
-                    <span key={key}>
-                      {item}
-                      <br />
-                    </span>
-                  ))}
+                  {/* {project.description.split("\n").map((item, key) => ( */}
+                  <span className="mb-2">
+                    {project.description}
+                    <br />
+                  </span>
+                  {/* ))} */}
                 </h4>
               </CardHeader>
             </CardBody>

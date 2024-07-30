@@ -1,33 +1,41 @@
 const projects = [
   {
-    github: "https://github.com/ousamuel/E-Commerce",
-    title: "eCommerce Platform (In Dev)",
+    github: "https://github.com/ousamuel/mysafety",
+    title: "MySafety",
     description:
-      "TypeScript - AWS Lambda/Cognito - DynamoDB\n• Implemented end-to-end features, ensuring web and mobile-friendly experience\n• Optimized cloud infrastructure on AWS, incorporating server-less architecture with AWS Lambda",
+      "TypeScript - Next Auth - Firebase \nThe ultimate tool for staying alert and aware about incidents around you",
+    src: "/projects/mysafety.png",
+    live: "https://my-safety-lyart.vercel.app/",
+  },
+  {
+    github: "https://github.com/ousamuel",
+    title: "eCommerce Platform",
+    description:
+      "TypeScript - AWS Lambda/Cognito - DynamoDB\nTransform your online shopping experience with our next-gen eCommerce platform. Coming soon!",
     src: "/projects/ecommerce.png",
-    live: "https://github.com/ousamuel/E-Commerce",
+    live: "https://github.com/ousamuel",
   },
   {
     github: "https://github.com/ousamuel/cashtrack",
-    title: "CashTrack (Deployed)",
+    title: "CashTrack",
     description:
-      "TypeScript - Node/Express - MongoDB\n• Expense-sharing application that simplifies group finances inspired by Splitwise\n• Users can add bills and payments to calculate distribution",
+      "TypeScript - Node/Express - MongoDB\nSimplify group finances and effortlessly manage shared expenses with CashTrack",
     src: "/projects/cashtrack.png",
     live: "https://www.loom.com/share/a811ea6664ad44ea8a67e11eb4f71439",
   },
   {
     github: "https://github.com/ousamuel/SteelStance",
-    title: "SteelStance (Deployed)",
+    title: "SteelStance",
     description:
-      "React - Next - Python - Flask\n• Fitness application where users can view programs and personal records\n• Utilized SQLAlchemy ORM to interact with the database, ensuring data integrity and efficient storage",
+      "React - Next - Python - Flask\nAchieve your fitness goals with personalized programs and performance tracking",
     src: "/projects/steelstance.png",
     live: "https://www.loom.com/share/ba8e4fa6b50b455da4cbbdf6c12f4bb3",
   },
   {
     github: "https://github.com/MarkTocino/PhaseFourAutoDetailProject",
-    title: "Auto Shop (Deployed)",
+    title: "Auto Service",
     description:
-      "React - Next - Python - Flask - Stripe\n• Automotive application that provides scheduled car servicing and anonymous bidding\n• Implemented user authentication and authorization features using Flask-Login",
+      "React - Next - Python - Flask - Stripe\n An automotive application that provides scheduled car servicing and anonymous bidding",
     src: "/projects/auto-shop.png",
     live: "https://www.loom.com/share/7d20f72f7f234448bd45b5e0efdc06ec",
   },
@@ -35,9 +43,9 @@ const projects = [
     github: "https://github.com/ousamuel/Subreddit-Clone",
     title: "r/BrewCrew",
     description:
-      "JavaScript - HTML - CSS\n• Reddit clone allowing users to interact with beer-related posts\n• Implemented sorting and saving options",
+      "JavaScript - HTML - CSS\n-> Dive into the world of beer with engaging posts and vibrant community interactions",
     src: "/projects/subreddit.png",
-    live: "https://www.loom.com/share/95060da598294000990d86472ffba61d?sid=9f714646-6629-4b2d-ab49-47d76614a146"
+    live: "https://www.loom.com/share/95060da598294000990d86472ffba61d?sid=9f714646-6629-4b2d-ab49-47d76614a146",
   },
   {
     github: "https://github.com/dommieh97/Rainy-Day-Repository",
@@ -47,4 +55,4 @@ const projects = [
     src: "/projects/rainy-day.png",
   },
 ];
-export {projects}
+export { projects };
