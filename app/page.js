@@ -237,7 +237,7 @@ export default function Home() {
         {projects.map((project) => (
           <Card
             key={project.title}
-            className="rounded-small m-5 py-5 bg-gray-300 project-card "
+            className="rounded-small m-5 py-5 pb-1 bg-gray-300 project-card "
           >
             <CardBody className="overflow-visible pt-1 items-center h-auto">
               <Link
@@ -268,7 +268,7 @@ export default function Home() {
                     />
                   </Link>
                 </small>
-                <h4 className="text-sm">
+                <h4 className="text-base">
                   {/* {project.description.split("\n").map((item, key) => ( */}
                   <span className="mb-2">
                     {project.description}
@@ -288,7 +288,7 @@ export default function Home() {
       <h1>Certifications</h1>
       <div
         id="certifications"
-        className="container c2 text-3xl items-center justify-center"
+        className="container c2 text-3xl items-stretch justify-center"
       >
         {Certs.map((cert) => (
           <Card
