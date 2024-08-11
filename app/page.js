@@ -40,7 +40,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2500);
     const readyTimer = setTimeout(() => {
       setIsPageReady(true);
     }, 4000);
