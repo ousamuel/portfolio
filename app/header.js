@@ -1,5 +1,4 @@
 "use client";
-import "./globals.css";
 import { useContext, useState, useEffect } from "react";
 import Link from "next/link";
 import { Image, Divider } from "@nextui-org/react";
@@ -10,16 +9,10 @@ export default function Header({ hide }) {
 
   const github = "https://github.com/ousamuel";
   const linkedIn = "https://www.linkedin.com/in/samuel-ou-0510s/";
-  const email = "mailto:samuelou510@gmail.com"
+  const email = "mailto:samuelou510@gmail.com";
   return (
-    <nav
-      className="navbar px-10"
-      style={{
-        backgroundColor: hide ? "transparent" : "rgb(148 163 184)",
-        boxShadow: hide ? null : "0px 5px 20px #1A2E3A",
-      }}
-    >
-      <div
+    <nav className="navbar px-10 bg-transparent">
+      {/* <div
         className="flex pt-1 dropbox"
         onClick={() => setIsOpen((prevstate) => !prevstate)}
       >
@@ -72,7 +65,6 @@ export default function Header({ hide }) {
             </g>
           </svg>
         </div>
-        {/* <Divider className="mx-4 " orientation="vertical" /> */}
 
         <div href="/" className="items-center justify-center float-left pl-2">
           <Image
@@ -81,10 +73,8 @@ export default function Header({ hide }) {
             className="so-logo rounded-none"
           />
         </div>
-      </div>
-      {/* <h1 className='text-3xl font-bold'>Sam</h1> */}
-
-      <div className={isOpen ? "dropdown-menu open " : "dropdown-menu"}>
+      </div> */}
+      {/* <div className={isOpen ? "dropdown-menu open " : "dropdown-menu"}>
         <ul>
           <li>
             <Link
@@ -127,23 +117,8 @@ export default function Header({ hide }) {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
       <span className="float-right font-bold text-2xl flex">
-        <Link
-          color="foreground"
-          className="mx-2 "
-          href={email}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          <Image
-            src="/logos/email.svg"
-            alt="email icon"
-            width="30px"
-            className=""
-          />
-        </Link>
         <Link
           color="foreground"
           className="mx-2 "

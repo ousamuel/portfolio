@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "@nextui-org/react";
-
+import AnimatedSection from "./Animated";
 const frontendSkills = [
   { name: "JavaScript", src: "/logos/javascript.svg", alt: "js-logo" },
   { name: "React", src: "/logos/react.svg", alt: "react-logo" },
@@ -23,15 +23,22 @@ const backendSkills = [
   { name: "SQL", src: "/logos/sql.svg", alt: "sql-logo" },
   { name: "PostgreSQL", src: "/logos/postgres.svg", alt: "postgres-logo" },
 ];
- {/* Front end: html, css js, react, tailwinds, query?? Bootstrap
+{
+  /* Front end: html, css js, react, tailwinds, query?? Bootstrap
 Back end: next js mysql, restful api, python
 Other/tools: git, GITHUB, VERCEL, heroic, typescript, viscose, bash
- */}
+ */
+}
 const SkillsList = () => (
   <div className="p-5 flex justify-evenly items-center w-full text-md sm:text-[20px] ">
     <ul>
-      {frontendSkills.map((skill) => (
-        <li key={skill.name} className="flex items-center">
+      {frontendSkills.map((skill, i) => (
+        <AnimatedSection
+          effect="slide-up"
+          key={skill.name}
+          className="flex items-center mb-2"
+          delay={i * 200}
+        >
           <Image
             className="pr-2 rounded-none"
             src={skill.src}
@@ -40,21 +47,26 @@ const SkillsList = () => (
             alt={skill.alt}
           />
           {skill.name}
-        </li>
+        </AnimatedSection>
       ))}
     </ul>
     <ul>
-      {backendSkills.map((skill) => (
-        <li key={skill.name} className="flex items-center justify-end">
-          {skill.name}
+      {backendSkills.map((skill, i) => (
+        <AnimatedSection
+          effect="bounce-in"
+          key={skill.name}
+          className="flex items-center mb-2"
+          delay={i * 200}
+        >
           <Image
-            className="pl-2 rounded-none"
+            className="pr-2 rounded-none"
             src={skill.src}
             width="40px"
             height="40px"
             alt={skill.alt}
           />
-        </li>
+          {skill.name}
+        </AnimatedSection>
       ))}
     </ul>
   </div>

@@ -6,26 +6,25 @@ import * as React from "react";
 import { NextUIProvider } from "@nextui-org/react";
 import { Providers, Context } from "./providers";
 import GoogleAnalytics from "./GoogleAnalytics";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({ children }) {
-  const { isOpen, setIsOpen } = useContext(Context);
 
   return (
     <html lang="en">
       <head>
         <title>Samuel Ou</title>
-
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
-          rel="stylesheet"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@800;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Raleway:wght@100&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
           rel="stylesheet"
         />
-      <GoogleTagManager gtmId="G-6PVQ9726CR" />
+        <GoogleTagManager gtmId="G-6PVQ9726CR" />
       </head>
 
       <body>
