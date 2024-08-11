@@ -37,8 +37,13 @@ html {
 }
 body {
   color: #09113e;
-  background-color: #ccd0da;
-  padding: 0 20px 20px 20px;
+  /* background-color: #ccd0da; */
+  /* padding: 0 1vw 1vw 1vw; */
+}
+@media (max-width: 1280px) {
+  body {
+    /* padding: 0 10px 10px 10px; */
+  }
 }
 h1 {
   font-weight: 900;
@@ -57,7 +62,7 @@ p {
   line-height: 1.4;
 }
 main {
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5); */
 }
 section {
 }
@@ -431,16 +436,16 @@ li {
 @keyframes move {
   0% {
     transform: translateY(30vh) rotateY(0deg);
-    height: 200px;
+    /* height: 200px; */
   }
   100% {
-    height: 150px;
+    /* height: 150px; */
     transform: translateY(5px) rotateY(360deg); /* Returns to original position */
   }
 }
 .spin-coin {
-  height: 150px;
-  animation: spin 2s linear, move 2s 2s;
+  height: 200px;
+  animation: spin 1s linear, move 1.5s 1s;
   transform: translateY(5px);
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
 }
@@ -449,12 +454,13 @@ li {
 }
 
 .main-body {
-  background-color: white;
-  border-radius: 10px;
+  /* background-color: white; */
+  background-color: #e4e8f1;
+  border-radius: 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: grow-x 1s ease-in-out;
+  animation: grow-x 0.75s ease-in-out;
   width: 100%;
   overflow: hidden; /* Prevents content from spilling out during the transition */
 }
@@ -467,3 +473,5 @@ li {
     width: 100%;
   }
 }
+
+

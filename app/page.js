@@ -34,12 +34,13 @@ export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   // for resume
   const [isLoading, setIsLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isPageReady, setIsPageReady] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 2000);
     const readyTimer = setTimeout(() => {
       setIsPageReady(true);
     }, 4000);
@@ -78,7 +79,10 @@ export default function Home() {
   // }, []);
 
   return (
-    <div className="flex flex-col items-center">
+    <div
+      className="flex flex-col items-center px-[10px]"
+      style={{ backgroundColor: isDarkMode ? "black" : "white" }}
+    >
       <Header />
       <RobotEyes />
       {/* <div className="flex justify-center h-[147.5px]"> */}
@@ -90,16 +94,20 @@ export default function Home() {
           alt="robot"
         /> */}
         <img
-          className="h-[200px] absolute top-[5px] z-50 coin-shadow rounded-full"
+          className="h-[200px] absolute top-[5px] z-50 coin-shadow rounded-full cursor-pointer"
           src="/logo.png"
           alt="logo"
+          onClick={() => {
+            setIsDarkMode((prevState) => !prevState);
+          }}
         />
       </div>
 
       <main className="main-body">
         <section
           id="welcome"
-          className="container text-6xl flex h-[calc(100vh-147.5px)] mb-4"
+          className="container text-6xl flex h-[calc(100vh-100px)] mb-4"
+          // className="container text-6xl flex h-[calc(100vh-147.5px)] mb-4"
         >
           <div className="welcome-left my-auto">
             {/* <p className="opening-slide">Hi, my name is</p> */}
@@ -228,10 +236,10 @@ export default function Home() {
               Fun fact about me: After years of playing pool, I successfully
               learned how to juggle.
             </p>
-            <AnimatedSection effect="fade-in" className="">
+            {/* <AnimatedSection effect="fade-in" className="">
               <h2>First Section</h2>
               <p>This section will fade in when scrolled into view.</p>
-            </AnimatedSection>
+            </AnimatedSection> */}
           </div>
         </section>
 

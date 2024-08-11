@@ -53,7 +53,7 @@ const SkillsList = () => (
     <ul>
       {backendSkills.map((skill, i) => (
         <AnimatedSection
-          effect="bounce-in"
+          effect="slide-up"
           key={skill.name}
           className="flex items-center mb-2"
           delay={i * 200}
