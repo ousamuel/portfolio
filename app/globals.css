@@ -459,7 +459,7 @@ li {
   transform: translateY(5px);
   /* box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); */
   position: absolute;
-  animation: spin 2.5s infinite 2.3s, move 1s 2.5s, invis 0s 4.5s;
+  animation: spin 2.5s infinite 1.8s, move 1s 2s, invis 0s 3s;
   /* spin delay = total combine time * .9 */
 }
 .coin {
