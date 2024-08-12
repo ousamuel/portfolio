@@ -30,6 +30,7 @@ import Contact from "./Contact";
 import Certs from "./Certs";
 import SkillsList from "./Skills";
 import { projects } from "./Projects";
+
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   // for resume
@@ -55,6 +56,7 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
