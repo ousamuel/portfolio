@@ -52,8 +52,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -103,6 +103,7 @@ export default function Home() {
           src="/images/robot.png"
           alt="robot"
         /> */}
+
         <img
           className="z-50 coin cursor-pointer"
           src="/logo.png"
@@ -125,6 +126,7 @@ export default function Home() {
               Delivering Creative Solutions
               <Traits />
             </div>
+            {/*  */}
             <span className="flex mt-3 resume">
               <Button className="resume-pop font-bold text-xl" onPress={onOpen}>
                 Resume
