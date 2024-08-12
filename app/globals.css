@@ -454,7 +454,7 @@ li {
   }
 }
 .spin-coin {
-  height: 180px;
+  height: 140px;
   opacity: 0;
   transform: translateY(5px);
   /* box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); */
@@ -466,15 +466,15 @@ li {
   position: absolute;
   border-radius: 100%;
   top: 5px;
-  height: 180px;
+  height: 140px;
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 1800px) {
+/* @media (max-width: 1800px) {
   .spin-coin,
   .coin {
     height: 140px;
   }
-}
+} */
 .bigO {
   height: 140px;
   transform: translateX(0px) translateY(30vh);
@@ -485,7 +485,7 @@ li {
   height: 140px;
   transform: translateX(-85px) translateY(30vh);
   position: absolute;
-  animation: leftMove 1.5s ease-in-out forwards 1s;
+  animation: leftMove 1.5s ease-in-out forwards 0.5s;
 }
 @keyframes leftMove {
   0% {
@@ -507,7 +507,7 @@ li {
   height: 140px;
   transform: translateX(-15px) translateY(30vh);
   position: absolute;
-  animation: rightMove 1.5s ease-in-out forwards 1s;
+  animation: rightMove 1.5s ease-in-out forwards 0.5s;
 }
 @keyframes rightMove {
   /* transform: scale(0.8) translateX(40px) translateY(calc(30vh + 70px)); */
@@ -531,7 +531,7 @@ li {
   height: 91px;
   transform: translateX(70px) translateY(calc(30vh + 48px));
   position: absolute;
-  animation: moveU 1.5s ease-in-out forwards 1s;
+  animation: moveU 1.5s ease-in-out forwards 0.5s;
 }
 /* translateY(calc(30vh + 23.5px)) */
 @keyframes moveU {
