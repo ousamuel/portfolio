@@ -25,7 +25,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { useRouter } from "next/navigation";
-import Header from "./Header";
+import Header from "./header";
 import Contact from "./Contact";
 import Certs from "./Certs";
 import SkillsList from "./Skills";
