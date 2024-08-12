@@ -440,17 +440,14 @@ li {
     transform: translateY(30vh) rotateY(0deg);
     /* height: 200px; */
   }
-  100% {
+  90% {
     /* height: 150px; */
-    transform: translateY(5px) rotateY(360deg);
-  }
-}
-@keyframes invis {
-  0% {
     opacity: 1;
+    transform: translateY(5px) rotateY(360deg);
   }
   100% {
     opacity: 0;
+    transform: translateY(5px) rotateY(360deg);
   }
 }
 .spin-coin {
@@ -459,7 +456,7 @@ li {
   transform: translateY(5px);
   /* box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); */
   position: absolute;
-  animation: spin 2.5s infinite 1.8s, move 1s 2s, invis 0s 3s;
+  animation: spin 2.5s infinite 1.8s, move 1s 2s;
   /* spin delay = total combine time * .9 */
 }
 .coin {
