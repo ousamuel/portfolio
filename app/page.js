@@ -56,11 +56,11 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 2250);
     const finishedLoading = setTimeout(() => {
       setIsPageReady(true);
     }, 3500);
@@ -89,15 +89,10 @@ export default function Home() {
 
   return (
     <div
-      className="flex flex-col items-center px-[10px]"
+      className="flex flex-col items-center px-[10px] pb-[10px]"
       style={{ backgroundColor: isDarkMode ? "black" : "white" }}
     >
       <Header />
-      <RobotEyes />
-      <div className={isVisible ? "see-more" : "hidden"}>
-        <img src="/images/see-more.svg" className="w-[50px]" />
-      </div>
-      {/* <div className="flex justify-center h-[147.5px]"> */}
       <div className="flex justify-center h-[100px]">
         {/* <img
           className="rounded-none h-[203px] z-40"
@@ -115,6 +110,10 @@ export default function Home() {
           }}
         />
       </div>
+      <div className={isVisible ? "see-more" : "hidden"}>
+        <img src="/images/see-more_white.svg" alt="▽" className="w-[40px]" />
+      </div>
+      {/* <div className="flex justify-center h-[147.5px]"> */}
       <main className="main-body">
         <section
           id="welcome"
