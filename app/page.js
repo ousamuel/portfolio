@@ -98,8 +98,6 @@ export default function Home() {
           // className="container text-6xl flex h-[calc(100vh-147.5px)] mb-4"
         >
           <div className="welcome-left my-auto">
-            {/* <p className="opening-slide">Hi, my name is</p> */}
-
             <h3 className="opening-slide font-bold">Samuel Ou</h3>
             <div className="mt-4 bio w-full">
               Software Engineer from <strong>Queens, NY</strong> <br></br>
@@ -204,7 +202,7 @@ export default function Home() {
               finding the most creative and efficient solutions that also
               provide valuable learning experiences. My passion lies in constant
               learning and growing my craftsmanship in software. <br />
-              <strong>Listen first, questions second.</strong>
+              {/* <strong>Listen first, questions second.</strong> */}
               <br />
               <br />
               <strong className="">
@@ -236,6 +234,7 @@ export default function Home() {
           <VerticalTimelineElement
             visible={true}
             className="vertical-timeline-element--work"
+            dateClassName="text-black"
             contentStyle={{ background: "#000000", color: "#00e4b3" }}
             contentArrowStyle={{ borderRight: "7px solid  #000000" }}
             date="Jul 2024 - present"
@@ -248,6 +247,7 @@ export default function Home() {
               />
             }
           >
+            {" "}
             <h3 className="vertical-timeline-element-title text-white">
               Software Engineering Fellow
             </h3>
@@ -325,9 +325,6 @@ export default function Home() {
             </Card>
           ))}
         </div>
-        {/* <div id="contact-me" className="container">
-        <h1 className="text-2xl">Email me @ samuelou510@gmail.com</h1>
-      </div> */}
 
         <h1>Certifications</h1>
         <div
