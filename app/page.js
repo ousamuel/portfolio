@@ -25,7 +25,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { useRouter } from "next/navigation";
-import Header from "./header";
+import Header from "./Header";
 import Contact from "./Contact";
 import Certs from "./Certs";
 import SkillsList from "./Skills";
@@ -40,43 +40,32 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
-    const readyTimer = setTimeout(() => {
+    }, 3500);
+    const finishedLoading = setTimeout(() => {
       setIsPageReady(true);
-    }, 4000);
+    }, 4500);
     return () => {
       clearTimeout(timer);
-      clearTimeout(readyTimer);
+      clearTimeout(finishedLoading);
     };
   }, []);
 
   if (isLoading) {
     return (
       <div className="h-[calc(100vh-20px)] flex flex-col items-center">
+        {/* <img className="rounded-full bigO opacity-30" src="/main-logo/bigO.png" alt="logo" /> */}
+        <img className="leftO" src="/main-logo/leftO.png" alt="logo" />
+        <img className="rightO" src="/main-logo/rightO.png" alt="logo" />
         <img
-          className="rounded-full h-[100px] spin-coin"
-          src="/logo.png"
+          className="rounded-full z-50 bigU"
+          src="/main-logo/bigU.png"
           alt="logo"
         />
+        {/* <img className="rounded-full bigO" src="/logo.png" alt="logo" /> */}
+        <img className="rounded-full spin-coin" src="/logo.png" alt="logo" />
       </div>
     );
   }
-  // const [hideHeader, setHideHeader] = useState(true);
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     const homeSection = document.getElementById("top-page");
-  //     const homeRect = homeSection.getBoundingClientRect();
-  //     if (homeRect.top <= 0 && homeRect.bottom >= 0) {
-  //       setHideHeader(true);
-  //     } else {
-  //       setHideHeader(false);
-  //     }
-  //   }
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   return (
     <div
@@ -94,15 +83,14 @@ export default function Home() {
           alt="robot"
         /> */}
         <img
-          className="h-[200px] absolute top-[5px] z-50 coin-shadow rounded-full cursor-pointer"
+          className="z-50 coin cursor-pointer"
           src="/logo.png"
           alt="logo"
           onClick={() => {
-            setIsDarkMode((prevState) => !prevState);
+            // setIsDarkMode((prevState) => !prevState);
           }}
         />
       </div>
-
       <main className="main-body">
         <section
           id="welcome"
@@ -326,7 +314,6 @@ export default function Home() {
                     </Link>
                   </small>
                   <h4 className="text-base">
-                    {/* {project.description.split("\n").map((item, key) => ( */}
                     <span className="mb-2">
                       {project.description}
                       <br />
@@ -376,3 +363,20 @@ export default function Home() {
     </div>
   );
 }
+
+// const [hideHeader, setHideHeader] = useState(true);
+// useEffect(() => {
+//   function handleScroll() {
+//     const homeSection = document.getElementById("top-page");
+//     const homeRect = homeSection.getBoundingClientRect();
+//     if (homeRect.top <= 0 && homeRect.bottom >= 0) {
+//       setHideHeader(true);
+//     } else {
+//       setHideHeader(false);
+//     }
+//   }
+//   window.addEventListener("scroll", handleScroll);
+//   return () => {
+//     window.removeEventListener("scroll", handleScroll);
+//   };
+// }, []);
