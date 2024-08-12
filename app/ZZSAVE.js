@@ -1,118 +1,4 @@
-"use client";
-import { useState, useEffect, useContext } from "react";
-import * as React from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Image,
-  Link,
-  NextUIProvider,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@nextui-org/react";
-import RobotEyes from "./RobotEyes";
-import Traits from "./Traits";
-import AnimatedSection from "./Animated";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import { useRouter } from "next/navigation";
-import Header from "./header";
-import Contact from "./Contact";
-import Certs from "./Certs";
-import SkillsList from "./Skills";
-import { projects } from "./Projects";
-export default function Home() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  // for resume
-  const [isLoading, setIsLoading] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isPageReady, setIsPageReady] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const handleScroll = () => {
-    // Check if the user has scrolled to the bottom
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-
-    if (scrollY + windowHeight >= documentHeight) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2500);
-    const finishedLoading = setTimeout(() => {
-      setIsPageReady(true);
-    }, 3500);
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(finishedLoading);
-    };
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="h-[calc(100vh-20px)] flex flex-col items-center">
-        {/* <img className="rounded-full bigO opacity-30" src="/main-logo/bigO.png" alt="logo" /> */}
-        <img className="leftO" src="/main-logo/leftO.png" alt="logo" />
-        <img className="rightO" src="/main-logo/rightO.png" alt="logo" />
-        <img
-          className="rounded-full z-50 bigU"
-          src="/main-logo/bigU.png"
-          alt="logo"
-        />
-        {/* <img className="rounded-full bigO" src="/logo.png" alt="logo" /> */}
-        <img className="rounded-full spin-coin" src="/logo.png" alt="logo" />
-      </div>
-    );
-  }
-
-  return (
-    <div
-      className="flex flex-col items-center px-[10px]"
-      style={{ backgroundColor: isDarkMode ? "black" : "white" }}
-    >
-      <Header />
-      <RobotEyes />
-      <div className={isVisible ? "see-more" : "hidden"}>
-        <img src="/images/see-more.svg" className="w-[50px]" />
-      </div>
-      {/* <div className="flex justify-center h-[147.5px]"> */}
-      <div className="flex justify-center h-[100px]">
-        {/* <img
-          className="rounded-none h-[203px] z-40"
-          id="top-page"
-          src="/images/robot.png"
-          alt="robot"
-        /> */}
-        <img
-          className="z-50 coin cursor-pointer"
-          src="/logo.png"
-          alt="logo"
-          onClick={() => {
-            // setIsDarkMode((prevState) => !prevState);
-          }}
-        />
-      </div>
-      <main className="main-body">
+<main className="main-body">
         <section
           id="welcome"
           className="container text-6xl flex h-[calc(100vh-100px)] mb-4"
@@ -120,9 +6,8 @@ export default function Home() {
         >
           <div className="welcome-left my-auto">
             <h3 className="opening-slide font-bold">Samuel Ou</h3>
-            <div className="my-4 bio w-full">
+            <div className="mt-4 bio w-full">
               Software Engineer from <strong>Queens, NY</strong> <br></br>
-              Delivering Creative Solutions
               <Traits />
             </div>
             <span className="flex mt-3 resume">
@@ -379,6 +264,3 @@ export default function Home() {
           ))}
         </div>
       </main>
-    </div>
-  );
-}
