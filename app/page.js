@@ -1,45 +1,22 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
 import * as React from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Image,
-  Link,
-  NextUIProvider,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@nextui-org/react";
-import RobotEyes from "./RobotEyes";
-import Traits from "./Traits";
+import { Button, useDisclosure } from "@nextui-org/react";
 import SpinCoin from "./SpinCoin";
-import AnimatedSection from "./Animated";
-
-import { useRouter } from "next/navigation";
 import Header from "./header";
-import Contact from "./Contact";
-import Certs from "./Certs";
-import SkillsList from "./Skills";
-import ProjectsComp from "./components/ProjectsComp";
-import SkillsComp from "./components/SkillsComp";
-import { projects } from "./Projects";
+
+import HomeComp from "./components/HomeComp";
 import AboutComp from "./components/AboutComp";
 import ExperienceComp from "./components/ExperienceComp";
-
+import ProjectsComp from "./components/ProjectsComp";
+import SkillsComp from "./components/SkillsComp";
 export default function Home() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   // for resume
   const [isLoading, setIsLoading] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isPageReady, setIsPageReady] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [selectedComponent, setSelectedComponent] = useState("none");
+  const [selectedComponent, setSelectedComponent] = useState("Home");
   const handleScroll = () => {
     // Check if the user has scrolled to the bottom
     const scrollY = window.scrollY;
@@ -62,7 +39,7 @@ export default function Home() {
     } else if (selectedComponent == "Skills") {
       return <SkillsComp />;
     } else {
-      return <div></div>;
+      return <HomeComp />;
     }
   };
   useEffect(() => {
@@ -73,7 +50,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2950);
     const finishedLoading = setTimeout(() => {
       setIsPageReady(true);
     }, 3500);
@@ -83,17 +60,18 @@ export default function Home() {
     };
   }, []);
 
+  const allButtons = ["Home", "About", "Experience", "Projects"];
   if (isLoading) {
     return <SpinCoin />;
   }
 
   return (
     <div
-      className="flex flex-col items-center px-[10px] pb-[10px]"
+      className="flex flex-col px-[10px] pb-[10px] items-center"
       style={{ backgroundColor: isDarkMode ? "black" : "white" }}
     >
       <Header />
-      <div className="flex justify-center h-[100px]">
+      <div className="flex flex-col items-center justify-center h-[65px]">
         {/* <img
           className="rounded-none h-[203px] z-40"
           id="top-page"
@@ -113,64 +91,23 @@ export default function Home() {
         <img src="/images/see-more_white.svg" alt="▽" className="w-[40px]" />
       </div>
       <main className="main-body">
-        <section
-          id="welcome"
-          className="container text-6xl flex h-[calc(100vh-60px)] mb-4"
+        <div
+          className="absolute z-50 top-[140px] flex flex-wrap 
+        justify-between w-5/6 md:w-3/5 max-w-[900px]"
         >
-          <div className="welcome-left my-auto">
-            <h3 className="opening-slide font-bold">Samuel Ou</h3>
-            <div className="my-4 bio w-full">
-              Software Engineer from <strong>Queens, NY</strong> <br></br>
-              Delivering Creative Solutions
-              <Traits />
-            </div>
-            {/*  */}
-            <span className="flex mt-3 resume">
-              <Button className="resume-pop font-bold text-xl" onPress={onOpen}>
-                Resume
-              </Button>
-              <Modal
-                size="4xl"
-                isOpen={isOpen}
-                onOpenChange={onOpenChange}
-                className="text-black"
+          {allButtons.map((btnName) => {
+            return (
+              <Button
+                key={btnName}
+                className={selectedComponent == btnName ? "bg-blue-400 " : ""}
+                onClick={() => setSelectedComponent(btnName)}
               >
-                <ModalContent>
-                  {(onClose) => (
-                    <>
-                      <ModalHeader className="flex flex-col gap-1"></ModalHeader>
-                      <ModalBody>
-                        <embed
-                          src="/Samuel Ou Resume.pdf"
-                          type="application/pdf"
-                          className="m-auto w-full h-[500px] "
-                        />
-                      </ModalBody>
-                      <ModalFooter></ModalFooter>
-                    </>
-                  )}
-                </ModalContent>
-              </Modal>
-            </span>
-          </div>
-          <div className="welcome-right flex flex-col m-auto">
-            <img
-              src="/images/with-laptop-1.png"
-              className="home-logo flex m-auto"
-              alt="logo"
-            />
-          </div>
-        </section>
-        <section>
-          <Button onClick={() => setSelectedComponent("About")}>About</Button>
-          <Button onClick={() => setSelectedComponent("Experience")}>
-            Experience
-          </Button>
-          <Button onClick={() => setSelectedComponent("Projects")}>
-            Projects
-          </Button>
-          <Button onClick={() => setSelectedComponent("Skills")}>Skills</Button>
-        </section>
+                {btnName}
+              </Button>
+            );
+          })}
+        </div>
+
         <section>{loadComponent()}</section>
       </main>
     </div>

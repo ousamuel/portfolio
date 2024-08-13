@@ -2,7 +2,7 @@ import { projects } from "../Projects";
 import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
 export default function ProjectsComp() {
   return (
-    <main className="main-body">
+    <div className="text-center">
       <h1 className="mt-4">Projects</h1>
       <p className="px-4 text-center text-lg">
         {"Video demos are viewable by clicking on the image"}
@@ -57,6 +57,6 @@ export default function ProjectsComp() {
           </Card>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

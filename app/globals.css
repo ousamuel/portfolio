@@ -57,11 +57,6 @@ body {
   /* padding: 0px 8px 0px 0px; */
   scrollbar-gutter: stable;
 }
-@media (max-width: 1280px) {
-  body {
-    /* padding: 0 10px 10px 10px; */
-  }
-}
 h1 {
   font-weight: 900;
   font-size: 3rem;
@@ -82,9 +77,31 @@ main {
   /* box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5); */
 }
 section {
+  /* height: calc(100vh - 110px); */
+  /* overflow: scroll; */
 }
 li {
   text-align: left;
+}
+.main-body {
+  min-height: calc(100vh - 75px);
+  background-color: #e4e8f1;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: grow-x 0.75s ease-in-out;
+  width: 100%;
+  padding-top: 110px;
+}
+
+@keyframes grow-x {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .see-more {
   position: fixed;
@@ -200,15 +217,15 @@ li {
 }
 
 .welcome-left {
-  width: 55%;
+  width: 60%;
   padding-left: 100px;
 }
 .welcome-right {
-  width: 45%;
+  width: 40%;
   padding-left: 50px;
 }
 .container {
-  padding: 50px;
+  /* padding: 50px; */
   min-width: 100%;
   position: relative;
   overflow: hidden;
@@ -242,16 +259,15 @@ li {
 }
 
 .navbar {
-  opacity: 0;
-  width: 100%;
+  /* width: 90%; */
   height: 65px;
+  right: 0px;
   z-index: 10001;
   display: flex;
   vertical-align: middle;
   position: absolute;
   text-align: center;
   align-items: center;
-  justify-content: space-between;
   animation: slideTop 1s forwards;
   animation-delay: 1.5s;
 }
@@ -387,9 +403,6 @@ li {
   h2 {
     font-size: 75px;
   }
-  .home-logo {
-    padding-top: 60px;
-  }
   .socials {
     padding-left: 0px;
   }
@@ -412,10 +425,6 @@ li {
 
   .navbar {
     padding-left: 30px;
-  }
-  .so-logo {
-    padding-top: 0px;
-    width: 30px;
   }
 }
 
@@ -474,11 +483,12 @@ li {
   }
   10% {
     transform: translateY(30vh) rotateY(0deg);
-    /* height: 200px; */
+    height: 140px;
     opacity: 1;
   }
   100% {
     opacity: 1;
+    height: 120px;
     transform: translateY(5px) rotateY(360deg);
   }
 }
@@ -494,7 +504,7 @@ li {
   position: absolute;
   border-radius: 100%;
   top: 5px;
-  height: 140px;
+  height: 120px;
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
   animation: shadow 2s;
   /* box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); */
@@ -598,25 +608,5 @@ li {
   100% {
     opacity: 0%;
     transform: translateX(0px) translateY(calc(30vh + 23.5px));
-  }
-}
-
-.main-body {
-  background-color: #e4e8f1;
-  border-radius: 1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: grow-x 0.75s ease-in-out;
-  width: 100%;
-  overflow: auto;
-}
-
-@keyframes grow-x {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 100%;
   }
 }

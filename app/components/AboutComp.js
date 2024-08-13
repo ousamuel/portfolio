@@ -5,23 +5,23 @@ export default function AboutComp() {
       <div className="welcome-right ">
         <h1 className="pb-2 text-center">Education</h1>
         <ul className="edu">
-          <li className="text-xl flex justify-center items-center ">
+          <li className="text-xl flex justify-center items-center my-1">
             <Image
-              className="m-2 ml-0 w-[40px]"
+              className="mr-2 w-[40px]"
               src="/logos/sbu.png"
               alt="sbu-logo"
             />
             Stony Brook University
           </li>
-          <li className=" text-xl flex justify-center items-center">
+          <li className=" text-xl flex justify-center items-center my-1">
             <Image
-              className="rounded-full m-2.5 w-[38px]"
+              className="rounded-full mr-2 w-[38px]"
               src="/logos/flatironlogo.png"
               alt="sbu-logo"
             />
             Flatiron School
           </li>
-          <li className="flex justify-center items-center">
+          <li className="flex justify-center items-center my-4">
             <Image
               className=" h-[300px] sm:h-[450px]  "
               src="/images/profile.png"
@@ -31,7 +31,7 @@ export default function AboutComp() {
         </ul>
       </div>
       <div className="welcome-left about-section">
-        <h1 className="opening-slide pl-6">About me</h1>
+        <h1 className=" pl-6">About me</h1>
         <p className="text-lg p-6 lower">
           My name is <span className="text-black">Samuel Ou</span> and I am a
           graduate from{" "}
@@ -43,7 +43,6 @@ export default function AboutComp() {
           learning experiences. My passion lies in constant learning and growing
           my craftsmanship in software. <br />
           {/* <strong>Listen first, questions second.</strong> */}
-          <br />
           <br />
           <strong className="">
             &quot;What single accomplishment are you most proud of?&quot;
