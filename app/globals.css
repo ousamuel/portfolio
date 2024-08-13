@@ -481,11 +481,12 @@ li {
     /* height: 200px; */
     opacity: 1;
   }
-  10% {
+  6.25% {
     transform: translateY(30vh) rotateY(0deg);
     height: 140px;
     opacity: 1;
   }
+  65%,
   100% {
     opacity: 1;
     height: 120px;
@@ -498,7 +499,7 @@ li {
   transform: translateY(5px);
   /* box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); */
   position: absolute;
-  animation: move 1.25s 1.45s;
+  animation: move 1.8s 1.45s;
 }
 .coin {
   position: absolute;
