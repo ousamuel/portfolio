@@ -18,6 +18,7 @@ import {
 } from "@nextui-org/react";
 import RobotEyes from "./RobotEyes";
 import Traits from "./Traits";
+import SpinCoin from "./SpinCoin";
 import AnimatedSection from "./Animated";
 import {
   VerticalTimeline,
@@ -60,7 +61,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2250);
+    }, 2750);
     const finishedLoading = setTimeout(() => {
       setIsPageReady(true);
     }, 3500);
@@ -71,20 +72,7 @@ export default function Home() {
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="h-[calc(100vh-20px)] flex flex-col items-center">
-        {/* <img className="rounded-full bigO opacity-30" src="/main-logo/bigO.png" alt="logo" /> */}
-        <img className="leftO" src="/main-logo/leftO.png" alt="logo" />
-        <img className="rightO" src="/main-logo/rightO.png" alt="logo" />
-        <img
-          className="rounded-full z-50 bigU"
-          src="/main-logo/bigU.png"
-          alt="logo"
-        />
-        {/* <img className="rounded-full bigO" src="/logo.png" alt="logo" /> */}
-        <img className="rounded-full spin-coin" src="/logo.png" alt="logo" />
-      </div>
-    );
+    return <SpinCoin />;
   }
 
   return (
@@ -381,6 +369,8 @@ export default function Home() {
             </Card>
           ))}
         </div>
+
+        
       </main>
     </div>
   );
