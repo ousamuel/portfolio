@@ -273,7 +273,7 @@ li {
   position: absolute;
   text-align: center;
   align-items: center;
-  animation: slideTop 1s forwards;
+  animation: slideTop 1s forwards 0.95s;
   animation-delay: 1.5s;
 }
 .dropdown {
