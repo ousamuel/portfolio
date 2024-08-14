@@ -10,10 +10,10 @@ export default function ExperienceComp() {
   return (
     <div className="flex flex-col pt-6">
       <section
-        className="w-full px-5 text-md flex flex-col items-center justify-center 
-  md:text-3xl"
+        className="w-full px-5 text-md flex flex-col 
+        items-center justify-center text-center md:text-3xl"
       >
-        <h1 className="py-3 text-center leading-none">Technical Skills</h1>
+        <h1 className="py-3 leading-none">Technical Skills</h1>
         <p className="text-xl"> Languages, Frameworks, Libraries, Tools</p>
 
         <SkillsList />

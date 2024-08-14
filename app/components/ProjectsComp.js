@@ -18,14 +18,14 @@ export default function ProjectsComp() {
         {"Video demos are viewable by clicking on the image"}
       </p> */}
       <div id="projects" className="flex w-full px-4">
-        <section className="w-0 sm:w-3/5 relative">
-          {/* <div
-            className="absolute w-full h-full border-2 border-bg-black
-          flex justify-center items-center pulsating-inset-glow "
+        <section className="hidden sm:flex sm:w-3/5 relative">
+          <div
+            className="absolute w-full h-full 
+          flex justify-center items-center  "
           >
-            Choose a Project <br />
-            --
-          </div> */}
+            {selectedSrc ? "" : `Choose any Project to Learn More`}
+            <br />
+          </div>
           {projects.map((project, i) => {
             return (
               <img

@@ -619,7 +619,7 @@ li {
 /* PROJECTS PAGE CSS */
 .fade-in-out-projects {
   opacity: 0;
-  transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
   width: 100%;
   position: absolute;
 }
