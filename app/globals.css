@@ -68,7 +68,7 @@ h2 {
 }
 h3 {
   font-weight: 900;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 p {
   line-height: 1.4;
@@ -153,29 +153,30 @@ li {
   justify-content: space-between;
   top: 140px;
   opacity: 0;
-  animation: slideIn 1s forwards 0.95s;
+  animation: slideIn 1s forwards 1.25s;
 }
 .bio {
   font-size: 25px;
   line-height: 1.3;
   width: 80%;
   opacity: 0;
-  animation: slideIn 1s forwards 0.95s;
+  animation: slideIn 1s forwards 1.25s;
 }
 .home-logo {
   opacity: 0;
   width: 100%;
   max-width: 600px;
-  animation: slideIn 1s forwards 0.95s;
+  animation: slideIn 1s forwards 1.25s;
   padding-top: 50px;
 }
 .opening-slide {
+  opacity: 0;
   animation: slideIn 1s forwards 0.75s;
   /* animation-delay: 5s; */
 }
 .resume {
   opacity: 0;
-  animation: slideIn 1s forwards 1.15s;
+  animation: slideIn 1s forwards 1.25s;
 }
 .resume-pop {
   background-color: #9bc8d5;
@@ -265,6 +266,7 @@ li {
 
 .navbar {
   /* width: 90%; */
+  opacity: 0;
   height: 65px;
   right: 0px;
   z-index: 10001;
@@ -273,7 +275,7 @@ li {
   position: absolute;
   text-align: center;
   align-items: center;
-  animation: slideTop 1s forwards 0.95s;
+  animation: slideTop 1s forwards 1.25s;
   animation-delay: 1.5s;
 }
 .dropdown {
