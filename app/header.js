@@ -15,38 +15,34 @@ export default function Header({ hide }) {
       <span className="float-right font-bold text-2xl flex">
         <Link
           color="foreground"
-          className="mx-2"
+          className="image-rep mx-2 pt-[3px]"
           href={linkedIn}
           target="_blank"
           rel="noopener noreferrer"
-          >
+        >
           <Image
             src="/logos/linkedin.svg"
             alt="linkedin logo"
             width="25px"
-            className="image-rep pt-[3px]"
-            />
+            className="rounded-none"
+          />
         </Link>
         <Link
           color="foreground"
-          className="mx-2"
+          className="image-rep mx-2 pt-1 opacity-50"
           href={github}
           target="_blank"
           rel="noopener noreferrer"
-          >
-          <Image
-            src="/logos/githubblack.svg"
-            alt="github logo"
-            width="23px"
-            className="image-rep pt-1"
-            />
+        >
+          <Image src="/logos/githubblack.svg" alt="github logo" width="23px" />
         </Link>
       </span>
     </nav>
   );
 }
 
-{/* <div
+{
+  /* <div
   className="flex pt-1 dropbox"
   onClick={() => setIsOpen((prevstate) => !prevstate)}
 >
@@ -107,8 +103,10 @@ export default function Header({ hide }) {
       className="so-logo rounded-none"
     />
   </div>
-</div> */}
-{/* <div className={isOpen ? "dropdown-menu open " : "dropdown-menu"}>
+</div> */
+}
+{
+  /* <div className={isOpen ? "dropdown-menu open " : "dropdown-menu"}>
   <ul>
     <li>
       <Link
@@ -151,4 +149,5 @@ export default function Header({ hide }) {
       </Link>
     </li>
   </ul>
-</div> */}
+</div> */
+}

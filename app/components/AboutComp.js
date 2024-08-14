@@ -1,7 +1,7 @@
 import { Image } from "@nextui-org/react";
 export default function AboutComp() {
   return (
-    <section id="about" className="container text-4xl sm:mt-10">
+    <section id="about" className="container text-4xl mt-10">
       <div className="welcome-right ">
         <h1 className="pb-2 text-center">Education</h1>
         <ul className="edu">

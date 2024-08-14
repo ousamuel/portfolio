@@ -91,10 +91,19 @@ li {
   flex-direction: column;
   align-items: center;
   animation: grow-x 0.75s ease-in-out;
-  width: 100%;
+  width: calc(100vw - 20px);
   padding-top: 110px;
 }
-
+@media (max-width: 1024px) {
+}
+.buttons {
+  position: absolute;
+  display: flex;
+  overflow: scroll;
+  justify-content: space-between;
+  top: 140px;
+  /* border: 2px solid black; */
+}
 @keyframes grow-x {
   0% {
     width: 0px;
@@ -225,15 +234,11 @@ li {
   padding-left: 50px;
 }
 .container {
-  /* padding: 50px; */
-  min-width: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-}
-.c2 {
-  padding: 20px;
 }
 #projects {
   padding-top: 0px;
@@ -246,13 +251,11 @@ li {
   cursor: pointer;
 }
 .image-rep {
-  border-radius: 0px;
-  filter: grayscale(1) brightness();
-  /* filter: invert(1) grayscale(1) brightness(10); */
+  filter: grayscale(1);
 }
 .image-rep:hover {
-  filter: none;
-  transition: 0s filter;
+  filter: grayscale(0);
+  opacity: 1;
 }
 .so-logo {
   width: 35px;
@@ -322,6 +325,7 @@ li {
 
 .marquee {
   width: 100%;
+  max-width: calc(100vw - 20px);
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
@@ -338,7 +342,6 @@ li {
   font-size: 20px;
   font-weight: bold;
 }
-
 @keyframes marquee {
   from {
     transform: translateX(0%);
@@ -355,6 +358,7 @@ li {
   }
   .welcome-left {
     padding-left: 0px;
+    padding-top: 20px;
   }
   .welcome-left,
   .welcome-right,
@@ -382,6 +386,7 @@ li {
     justify-content: center;
   }
   .bio {
+    margin: 10px 0px;
     width: 90%;
     margin: auto;
   }
@@ -414,15 +419,12 @@ li {
   }
   .container {
     font-size: 40px;
-    padding: 25px;
-    padding-top: 70px;
   }
   .welcome-left,
   .welcome-right {
     width: 100%;
     padding-left: 0px;
   }
-
   .navbar {
     padding-left: 30px;
   }
@@ -447,18 +449,17 @@ li {
   opacity: 1;
 }
 /* Initial state: hidden and positioned off-screen */
-.bounce-in {
+/* .bounce-in {
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 0.5s ease-in-out;
 }
 
-/* Triggered state: visible and in place */
 .bounce-in.show {
   opacity: 1;
   transform: translateX(0);
   animation: bounce 2s ease-in-out forwards;
-}
+} */
 
 /* Keyframes for the bounce effect */
 @keyframes bounce {
@@ -609,5 +610,62 @@ li {
   100% {
     opacity: 0%;
     transform: translateX(0px) translateY(calc(30vh + 23.5px));
+  }
+}
+
+/* PROJECTS PAGE CSS */
+.fade-in-out-projects {
+  opacity: 0;
+  transition: opacity 0.45s ease-in-out;
+  width: 100%;
+  position: absolute;
+}
+
+.fade-in-out-projects.show {
+  opacity: 1;
+}
+.fade-in-bouncing-arrow {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.fade-in-bouncing-arrow.show {
+  opacity: 1;
+  animation: bounceRight 1.75s infinite;
+}
+@keyframes bounceRight {
+  0%,
+  80%,
+  90%,
+  100% {
+    transform: translateY(0);
+  }
+  85% {
+    transform: translateX(13px);
+  }
+  95% {
+    transform: translateX(8px);
+  }
+}
+
+.pulsating-inset-glow {
+  /* background-color: #2c3e50; */
+  /* border-radius: 10px; */
+  box-shadow: inset 0 0 10px #ff00cc, inset 0 0 20px #ff00cc,
+    inset 0 0 30px #ff00cc;
+  animation: pulse-inset-glow 2s infinite;
+}
+
+@keyframes pulse-inset-glow {
+  0% {
+    box-shadow: inset 0 0 10px #ff00cc, inset 0 0 20px #ff00cc,
+      inset 0 0 30px #ff00cc;
+  }
+  50% {
+    box-shadow: inset 0 0 20px #ff00cc, inset 0 0 30px #ff00cc,
+      inset 0 0 40px #ff00cc;
+  }
+  100% {
+    box-shadow: inset 0 0 10px #ff00cc, inset 0 0 20px #ff00cc,
+      inset 0 0 30px #ff00cc;
   }
 }

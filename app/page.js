@@ -64,7 +64,7 @@ export default function Home() {
   if (isLoading) {
     return <SpinCoin />;
   }
-
+  // IDEA: if button space is too small, then makae it slideable instead, check ur phone
   return (
     <div
       className="flex flex-col px-[10px] pb-[10px] items-center"
@@ -87,19 +87,18 @@ export default function Home() {
           }}
         />
       </div>
-      <div className={isVisible ? "see-more" : "hidden absolute"}>
+      {/* <div className={isVisible ? "see-more" : "hidden absolute"}>
         <img src="/images/see-more_white.svg" alt="▽" className="w-[40px]" />
-      </div>
+      </div> */}
       <main className="main-body">
-        <div
-          className="absolute z-50 top-[140px] flex flex-wrap 
-        justify-between w-5/6 md:w-3/5 max-w-[900px]"
-        >
-          {allButtons.map((btnName) => {
+        <div className="buttons z-50 w-5/6 md:w-3/5 max-w-[500px]">
+          {allButtons.map((btnName, i) => {
             return (
               <Button
-                key={btnName}
-                className={selectedComponent == btnName ? "bg-blue-400 " : ""}
+                key={i}
+                className={
+                  selectedComponent == btnName ? "bg-blue-400 mx-1" : "mx-1"
+                }
                 onClick={() => setSelectedComponent(btnName)}
               >
                 {btnName}
@@ -108,7 +107,7 @@ export default function Home() {
           })}
         </div>
 
-        <section>{loadComponent()}</section>
+        <section className='w-full flex justify-center'>{loadComponent()}</section>
       </main>
     </div>
   );

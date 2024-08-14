@@ -12,15 +12,12 @@ export default function HomeComp() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <section
-      id="welcome"
-      className="container text-6xl flex "
-    >
+    <section id="welcome" className="container text-6xl flex">
       <div className="welcome-left my-auto">
         <h3 className="opening-slide font-bold">Samuel Ou</h3>
         <div className="my-4 bio w-full">
           Software Engineer from <strong>Queens, NY</strong> <br></br>
-          Delivering Creative Solutions
+          Delivering Creative and Strategic Solutions
           <Traits />
         </div>
         {/*  */}

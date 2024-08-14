@@ -1,17 +1,97 @@
 import { projects } from "../Projects";
+import { useState } from "react";
 import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
 export default function ProjectsComp() {
+  const [selectedSrc, setSelectedSrc] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const handleMouseEnter = (index) => {
+    setSelectedSrc(index);
+  };
+
+  const handleMouseLeave = () => {
+    setSelectedSrc(null);
+  };
   return (
-    <div className="text-center">
-      <h1 className="mt-4">Projects</h1>
-      <p className="px-4 text-center text-lg">
+    <div className="flex flex-col w-full">
+      <h1 className="mt-4 text-center ">Projects</h1>
+      {/* <p className="px-4 text-center text-lg">
         {"Video demos are viewable by clicking on the image"}
-      </p>
-      <div
-        id="projects"
-        className="container text-3xl items-stretch justify-center"
-      >
-        {projects.map((project) => (
+      </p> */}
+      <div id="projects" className="flex w-full px-4">
+        <section className="w-0 sm:w-3/5 relative">
+          {/* <div
+            className="absolute w-full h-full border-2 border-bg-black
+          flex justify-center items-center pulsating-inset-glow "
+          >
+            Choose a Project <br />
+            --
+          </div> */}
+          {projects.map((project, i) => {
+            return (
+              <img
+                key={i}
+                className={
+                  selectedSrc == project.src
+                    ? "fade-in-out-projects show"
+                    : "fade-in-out-projects"
+                }
+                src={project.src}
+                alt="selected-hover"
+              />
+            );
+          })}
+        </section>
+        <section className="w-full sm:w-2/5 flex flex-col justify-center">
+          {projects.map((project, i) => {
+            // project: title, live, src, github, description
+
+            return (
+              <div
+                key={i}
+                className="p-4 ml-4 hover:bg-[#ecf0fa]"
+                onMouseEnter={() => handleMouseEnter(project.src)}
+                onMouseLeave={handleMouseLeave}
+                onClick={() => {
+                  setSelectedSrc(null);
+                  setSelectedSrc(project.src);
+                }}
+              >
+                <div className="flex justify-between">
+                  <strong>{project.title}</strong>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className={`flex hover:bg-gray-200 px-2 py-1 rounded-sm ${
+                      selectedSrc == project.src
+                        ? "fade-in-bouncing-arrow show"
+                        : "fade-in-bouncing-arrow"
+                    }`}
+                  >
+                    <img
+                      src="/images/right-arrow.svg"
+                      width={24}
+                      alt="right-arrow"
+                    />
+                    <img
+                      src="/logos/githubblack.svg"
+                      width={24}
+                      alt="githublogo"
+                    />
+                  </a>
+                </div>
+                <p className={selectedSrc == project.src ? "pt-1" : "hidden"}>
+                  {project.description}
+                </p>
+              </div>
+            );
+          })}
+        </section>
+      </div>
+    </div>
+  );
+}
+{
+  /* {projects.map((project) => (
           <Card
             key={project.title}
             className="rounded-small m-5 py-5 pb-1 bg-gray-300 project-card "
@@ -50,13 +130,9 @@ export default function ProjectsComp() {
                     {project.description}
                     <br />
                   </span>
-                  {/* ))} */}
                 </h4>
               </CardHeader>
             </CardBody>
           </Card>
-        ))}
-      </div>
-    </div>
-  );
+        ))} */
 }

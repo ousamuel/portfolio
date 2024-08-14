@@ -23,7 +23,7 @@ export default function ExperienceComp() {
         <VerticalTimeline>
           <VerticalTimelineElement
             visible={true}
-            className="vertical-timeline-element--work "
+            className="vertical-timeline-element--work"
             dateClassName="text-black"
             contentStyle={{ background: "#000000", color: "#00e4b3" }}
             contentArrowStyle={{ borderRight: "7px solid  #000000" }}
@@ -65,7 +65,7 @@ export default function ExperienceComp() {
         <h1 className="text-center">Certifications</h1>
         <div
           id="certifications"
-          className="container c2 text-3xl items-stretch justify-center"
+          className="container text-3xl items-stretch justify-center"
         >
           {Certs.map((cert) => (
             <Card
