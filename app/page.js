@@ -57,7 +57,7 @@ export default function Home() {
     }, 2650);
     const finishedLoading = setTimeout(() => {
       setIsPageReady(true);
-    }, 2850);
+    }, 3050);
     return () => {
       clearTimeout(timer);
       clearTimeout(finishedLoading);
@@ -94,30 +94,29 @@ export default function Home() {
       {/* <div className={isVisible ? "see-more" : "hidden absolute"}>
         <img src="/images/see-more_white.svg" alt="▽" className="w-[40px]" />
       </div> */}
-      {isPageReady && (
-        <main className="main-body">
-          <div></div>
-          <div className="buttons z-50 w-5/6 md:w-3/5 max-w-[500px]">
-            {allButtons.map((btnName, i) => {
-              return (
-                <Button
-                  key={i}
-                  className={
-                    selectedComponent == btnName ? "bg-blue-400 mx-1" : "mx-1"
-                  }
-                  onClick={() => setSelectedComponent(btnName)}
-                >
-                  {btnName}
-                </Button>
-              );
-            })}
-          </div>
+      <main className="main-body">
+        <div className="buttons z-50 w-5/6 md:w-3/5 max-w-[500px]">
+          {allButtons.map((btnName, i) => {
+            return (
+              <Button
+                key={i}
+                className={
+                  selectedComponent == btnName ? "bg-blue-400 mx-1" : "mx-1"
+                }
+                onClick={() => setSelectedComponent(btnName)}
+              >
+                {btnName}
+              </Button>
+            );
+          })}
+        </div>
 
-          <section className="w-full flex justify-center">
-            {loadComponent()}
-          </section>
-        </main>
-      )}
+        <section
+          className={isPageReady ? "w-full flex justify-center" : "hidden"}
+        >
+          {loadComponent()}
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+"use client";
 import {
   Modal,
   ModalContent,
@@ -21,7 +22,7 @@ export default function HomeComp() {
             <AnimatedSection
               effect="slide-up"
               key={i}
-              className={`flex items-center mb-2 ${i == 5 && 'mr-4'}`}
+              className={`flex items-center mb-2 ${i == 5 && "mr-4"}`}
               delay={i * 100}
             >
               {letter}
