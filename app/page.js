@@ -4,12 +4,14 @@ import * as React from "react";
 import { Button, useDisclosure } from "@nextui-org/react";
 import SpinCoin from "./SpinCoin";
 import Header from "./header";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 import HomeComp from "./components/HomeComp";
 import AboutComp from "./components/AboutComp";
 import ExperienceComp from "./components/ExperienceComp";
 import ProjectsComp from "./components/ProjectsComp";
 import SkillsComp from "./components/SkillsComp";
+import PhotosComp from "./components/PhotosComp";
 export default function Home() {
   // for resume
   const [isLoading, setIsLoading] = useState(true);
@@ -38,6 +40,8 @@ export default function Home() {
       return <ProjectsComp />;
     } else if (selectedComponent == "Skills") {
       return <SkillsComp />;
+    } else if (selectedComponent == "Photos") {
+      return <PhotosComp />;
     } else {
       return <HomeComp />;
     }
@@ -53,7 +57,7 @@ export default function Home() {
     }, 2650);
     const finishedLoading = setTimeout(() => {
       setIsPageReady(true);
-    }, 3500);
+    }, 2850);
     return () => {
       clearTimeout(timer);
       clearTimeout(finishedLoading);
@@ -90,25 +94,30 @@ export default function Home() {
       {/* <div className={isVisible ? "see-more" : "hidden absolute"}>
         <img src="/images/see-more_white.svg" alt="▽" className="w-[40px]" />
       </div> */}
-      <main className="main-body">
-        <div className="buttons z-50 w-5/6 md:w-3/5 max-w-[500px]">
-          {allButtons.map((btnName, i) => {
-            return (
-              <Button
-                key={i}
-                className={
-                  selectedComponent == btnName ? "bg-blue-400 mx-1" : "mx-1"
-                }
-                onClick={() => setSelectedComponent(btnName)}
-              >
-                {btnName}
-              </Button>
-            );
-          })}
-        </div>
+      {isPageReady && (
+        <main className="main-body">
+          <div></div>
+          <div className="buttons z-50 w-5/6 md:w-3/5 max-w-[500px]">
+            {allButtons.map((btnName, i) => {
+              return (
+                <Button
+                  key={i}
+                  className={
+                    selectedComponent == btnName ? "bg-blue-400 mx-1" : "mx-1"
+                  }
+                  onClick={() => setSelectedComponent(btnName)}
+                >
+                  {btnName}
+                </Button>
+              );
+            })}
+          </div>
 
-        <section className='w-full flex justify-center'>{loadComponent()}</section>
-      </main>
+          <section className="w-full flex justify-center">
+            {loadComponent()}
+          </section>
+        </main>
+      )}
     </div>
   );
 }

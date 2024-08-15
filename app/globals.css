@@ -366,6 +366,7 @@ li {
   }
   .welcome-left,
   .welcome-right,
+  .name,
   .resume {
     width: 100%;
     text-align: center;

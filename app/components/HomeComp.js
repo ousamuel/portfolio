@@ -8,13 +8,26 @@ import {
 } from "@nextui-org/react";
 import Traits from "../Traits";
 import { useDisclosure } from "@nextui-org/react";
+import AnimatedSection from "../Animated";
 export default function HomeComp() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
+  const name = ["S", "a", "m", "u", "e", "l", "O", "u"];
   return (
     <section id="welcome" className="container text-6xl flex">
       <div className="welcome-left my-auto">
-        <h3 className="opening-slide font-bold">Samuel Ou</h3>
+        {/* <h3 className="opening-slide font-bold">Samuel Ou</h3> */}
+        <h3 className="flex font-bold name">
+          {name.map((letter, i) => (
+            <AnimatedSection
+              effect="slide-up"
+              key={i}
+              className={`flex items-center mb-2 ${i == 5 && 'mr-4'}`}
+              delay={i * 100}
+            >
+              {letter}
+            </AnimatedSection>
+          ))}
+        </h3>
         <div className="my-4 bio w-full">
           Software Engineer from <strong>Queens, NY</strong> <br></br>
           Delivering Creative and Strategic Solutions

@@ -24,7 +24,9 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Raleway:wght@100&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
           rel="stylesheet"
         />
-        <GoogleTagManager gtmId="G-6PVQ9726CR" />
+        {/* <GoogleTagManager gtmId="G-6PVQ9726CR" /> */}
+        <GoogleAnalytics />
+
       </head>
 
       <body>
