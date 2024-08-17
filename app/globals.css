@@ -85,47 +85,49 @@ li {
 }
 .main-body {
   min-height: calc(100vh - 75px);
-  /* background-color: #e4e8f1; */
+  background: linear-gradient(0deg, #9ec0ec, #e4e8f1);
+  background-size: 300% 300%;
   border-radius: 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: grow-x 0.4s ease-in-out;
+  animation: grow-x 0.4s ease-in-out, AnimationName 5s ease infinite;
   width: calc(100vw - 20px);
   padding-top: 110px;
 }
 
 @keyframes grow-x {
   0% {
+    background-color: #e4e8f1;
     width: 0px;
   }
   100% {
+    background-color: transparent;
     width: 100%;
   }
 }
-.background-gradient {
+/* .background-gradient {
   background: linear-gradient(75deg, #e4e8f1, #b0c7e5);
   background-size: 400% 400%;
 
   -webkit-animation: AnimationName 3s ease infinite;
   -moz-animation: AnimationName 3s ease infinite;
   animation: AnimationName 3s ease infinite;
-}
-
+} */
 @-webkit-keyframes AnimationName {
-  0%{background-position:52% 0%}
-  50%{background-position:49% 100%}
-  100%{background-position:52% 0%}
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
 }
 @-moz-keyframes AnimationName {
-  0%{background-position:52% 0%}
-  50%{background-position:49% 100%}
-  100%{background-position:52% 0%}
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
 }
 @keyframes AnimationName {
-  0%{background-position:52% 0%}
-  50%{background-position:49% 100%}
-  100%{background-position:52% 0%}
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
 }
 .see-more {
   position: fixed;
@@ -696,4 +698,3 @@ li {
       inset 0 0 30px #ff00cc;
   }
 }
-
