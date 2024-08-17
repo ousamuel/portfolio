@@ -5,7 +5,7 @@ import { Button, useDisclosure } from "@nextui-org/react";
 import SpinCoin from "./SpinCoin";
 import Header from "./header";
 import GoogleAnalytics from "./components/GoogleAnalytics";
-
+import VantaBackground from "./components/Vanta";
 import HomeComp from "./components/HomeComp";
 import AboutComp from "./components/AboutComp";
 import ExperienceComp from "./components/ExperienceComp";
@@ -94,7 +94,7 @@ export default function Home() {
       {/* <div className={isVisible ? "see-more" : "hidden absolute"}>
         <img src="/images/see-more_white.svg" alt="▽" className="w-[40px]" />
       </div> */}
-      <main className="main-body">
+      <main className="main-body background-gradient">
         <div className="buttons z-50 w-5/6 md:w-3/5 max-w-[500px]">
           {allButtons.map((btnName, i) => {
             return (
