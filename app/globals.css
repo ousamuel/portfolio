@@ -85,7 +85,7 @@ li {
 }
 .main-body {
   min-height: calc(100vh - 75px);
-  background: linear-gradient(0deg, #9ec0ec, #e4e8f1);
+  background: linear-gradient(0deg, #b5ccea, #e4e8f1);
   background-size: 300% 300%;
   border-radius: 1px;
   display: flex;
