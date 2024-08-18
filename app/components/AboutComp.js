@@ -33,7 +33,7 @@ export default function AboutComp() {
       <div className="welcome-left about-section">
         <h1 className=" pl-6">About me</h1>
         <p className="text-lg p-6 lower">
-          My name is <span className="text-black">Samuel Ou</span> and I am a
+          My name is <span className="">Samuel Ou</span> and I am a
           graduate from{" "}
           <span className="text-red-600">Stony Brook University</span> and{" "}
           <span className="text-blue-600"> Flatiron Bootcamp</span> <br />
@@ -57,13 +57,16 @@ export default function AboutComp() {
           of who I&apos;ve become and am excited to keep growing.
           <br />
           <br />
-          Fun fact about me: After years of playing pool, I successfully learned
-          how to juggle.
+          &quot;Listen first, questions after.&quot; - Mama Ou
         </p>
         {/* <AnimatedSection effect="fade-in" className="">
         <h2>First Section</h2>
         <p>This section will fade in when scrolled into view.</p>
       </AnimatedSection> */}
+      </div>
+
+      <div>
+
       </div>
     </section>
   );

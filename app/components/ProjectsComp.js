@@ -1,7 +1,7 @@
 import { projects } from "../Projects";
 import { useState } from "react";
 import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
-export default function ProjectsComp() {
+export default function ProjectsComp({ isDarkMode }) {
   const [selectedSrc, setSelectedSrc] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const handleMouseEnter = (index) => {
@@ -11,6 +11,7 @@ export default function ProjectsComp() {
   const handleMouseLeave = () => {
     setSelectedSrc(null);
   };
+
   return (
     <div className="flex flex-col w-full">
       <h1 className="mt-4 text-center ">Projects</h1>
@@ -48,7 +49,9 @@ export default function ProjectsComp() {
             return (
               <div
                 key={i}
-                className="p-4 ml-4 hover:bg-[#ecf0fa]"
+                className={`p-4 ml-4 ${
+                  isDarkMode ? "hover:bg-gray-900" : "hover:bg-[#ecf0fa]"
+                }`}
                 onMouseEnter={() => handleMouseEnter(project.src)}
                 onMouseLeave={handleMouseLeave}
                 onClick={() => {
@@ -79,7 +82,7 @@ export default function ProjectsComp() {
                     />
                   </a>
                 </div>
-                <p className={selectedSrc == project.src ? "pt-1" : "hidden"}>
+                <p className={selectedSrc == project.src ? `pt-1` : "hidden"}>
                   {project.description}
                 </p>
               </div>

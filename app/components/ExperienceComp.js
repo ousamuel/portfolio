@@ -24,7 +24,7 @@ export default function ExperienceComp() {
           <VerticalTimelineElement
             visible={true}
             className="vertical-timeline-element--work"
-            dateClassName="text-black"
+            dateClassName=""
             contentStyle={{ background: "#000000", color: "#00e4b3" }}
             contentArrowStyle={{ borderRight: "7px solid  #000000" }}
             date="Jul 2024 - present"

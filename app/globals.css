@@ -51,7 +51,7 @@ html {
   font-style: normal;
 }
 body {
-  color: #09113e;
+  /* color: #09113e; */
   overflow: overlay;
   font-weight: 400;
   /* padding: 0px 8px 0px 0px; */
@@ -83,56 +83,124 @@ section {
 li {
   text-align: left;
 }
+@keyframes grow-x {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .main-body {
   min-height: calc(100vh - 75px);
-  background: linear-gradient(0deg, #b5ccea, #e4e8f1);
+  /* background: linear-gradient(0deg, #b5ccea, #e4e8f1); */
   background-size: 300% 300%;
   border-radius: 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: grow-x 0.4s ease-in-out, AnimationName 5s ease infinite;
+  animation: grow-x 0.4s ease-in-out;
   width: calc(100vw - 20px);
   padding-top: 110px;
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
 }
 
-@keyframes grow-x {
-  0% {
-    background-color: #e4e8f1;
-    width: 0px;
-  }
-  100% {
-    background-color: transparent;
-    width: 100%;
-  }
-}
-/* .background-gradient {
+.background-gradient {
   background: linear-gradient(75deg, #e4e8f1, #b0c7e5);
   background-size: 400% 400%;
-
   -webkit-animation: AnimationName 3s ease infinite;
   -moz-animation: AnimationName 3s ease infinite;
-  animation: AnimationName 3s ease infinite;
-} */
+  animation: grow-x 0.4s ease-in-out, AnimationName 3s ease infinite;
+}
+.background-gradient-dark {
+  background: linear-gradient(75deg, #000c28, #1f3655);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: grow-x 0.4s ease-in-out, AnimationName 3s ease infinite;
+}
+
 @-webkit-keyframes AnimationName {
-  0%{background-position:50% 0%}
-  50%{background-position:51% 100%}
-  100%{background-position:50% 0%}
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }
 @-moz-keyframes AnimationName {
-  0%{background-position:50% 0%}
-  50%{background-position:51% 100%}
-  100%{background-position:50% 0%}
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }
 @keyframes AnimationName {
-  0%{background-position:50% 0%}
-  50%{background-position:51% 100%}
-  100%{background-position:50% 0%}
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }
+
+.white-block-section {
+  /* position: fixed; */
+  width: calc(100vw - 20px);
+  height: calc(100vh - 75px);
+  display: flex;
+}
+.white-block-left {
+  position: fixed;
+  width: 60%;
+  height: 100vh;
+  z-index: 1000;
+  transform: translateX(-150%);
+  animation: switchCompsLeft ease-in-out 1.3s;
+}
+.white-block-right {
+  position: fixed;
+  width: 60%;
+  height: 100vh;
+  z-index: 1000;
+  transform: translateX(150%);
+  animation: switchCompsRight ease-in-out 1.3s;
+}
+@keyframes switchCompsLeft {
+  0%,
+  100% {
+    transform: translateX(-150%);
+  }
+  33%,
+  66% {
+    transform: translateX(-45%);
+  }
+}
+@keyframes switchCompsRight {
+  0%,
+  100% {
+    transform: translateX(150%);
+  }
+  33%,
+  66% {
+    transform: translateX(45%);
+  }
+}
+
 .see-more {
   position: fixed;
   bottom: 5px;
-  z-index: 1000;
+  z-index: 500;
   animation: slideIn 1.5s forwards;
   border-radius: 100%;
   padding: 5px;
@@ -283,6 +351,7 @@ li {
 .image-rep:hover {
   filter: grayscale(0);
   opacity: 1;
+  scale: 1.4;
 }
 .so-logo {
   width: 35px;
@@ -533,12 +602,20 @@ li {
 }
 .coin {
   position: absolute;
+  z-index: 1001;
   border-radius: 100%;
   top: 5px;
   height: 120px;
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
   animation: shadow 2s;
-  /* box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); */
+}
+.coin:hover {
+  scale: 1.05;
+}
+.black-shadow {
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+}
+.white-shadow {
+  box-shadow: 0 7px 20px rgba(255, 255, 255, 0.3);
 }
 @keyframes shadow {
   0% {
@@ -698,3 +775,4 @@ li {
       inset 0 0 30px #ff00cc;
   }
 }
+

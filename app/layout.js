@@ -9,7 +9,6 @@ import GoogleAnalytics from "./GoogleAnalytics";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <head>
@@ -26,7 +25,6 @@ export default function RootLayout({ children }) {
         />
         {/* <GoogleTagManager gtmId="G-6PVQ9726CR" /> */}
         <GoogleAnalytics />
-
       </head>
 
       <body>

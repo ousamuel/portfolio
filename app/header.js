@@ -29,7 +29,7 @@ export default function Header({ hide }) {
         </Link>
         <Link
           color="foreground"
-          className="image-rep mx-2 pt-1 opacity-50"
+          className="image-rep mx-2 mt-1 py-0 opacity-50 bg-white rounded-full"
           href={github}
           target="_blank"
           rel="noopener noreferrer"
