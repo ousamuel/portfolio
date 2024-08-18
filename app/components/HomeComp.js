@@ -7,14 +7,14 @@ import {
   ModalFooter,
   Button,
 } from "@nextui-org/react";
-import Traits from "../Traits";
+import Traits from "./Traits";
 import { useDisclosure } from "@nextui-org/react";
 import AnimatedSection from "../Animated";
 export default function HomeComp() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const name = ["S", "a", "m", "u", "e", "l", "O", "u"];
   return (
-    <section id="welcome" className="container text-6xl flex">
+    <section id="welcome" className="container text-6xl flex pb-[200px]">
       <div className="welcome-left my-auto">
         {/* <h3 className="opening-slide font-bold">Samuel Ou</h3> */}
         <h3 className="flex font-bold name">

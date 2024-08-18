@@ -1,5 +1,5 @@
 import React from "react";
-import AnimatedSection from "./Animated";
+import AnimatedSection from "../Animated";
 export default function Traits() {
   const traits = [
     "Quality-Focused",

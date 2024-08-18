@@ -4,8 +4,8 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
-import Certs from "../Certs";
-import SkillsList from "../Skills";
+import Certs from "../lists/Certs";
+import SkillsList from "../lists/Skills";
 export default function ExperienceComp() {
   return (
     <div className="flex flex-col pt-6">

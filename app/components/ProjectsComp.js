@@ -1,4 +1,4 @@
-import { projects } from "../Projects";
+import { projects } from "../lists/Projects";
 import { useState } from "react";
 import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
 export default function ProjectsComp({ isDarkMode }) {

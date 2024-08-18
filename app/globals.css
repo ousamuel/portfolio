@@ -23,8 +23,8 @@
 .bitter-font {
   font-family: "Bitter", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 600;
+  font-style: bold;
 }
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -47,14 +47,12 @@ html {
   background-color: transparent;
   font-family: "Bitter", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
 }
 body {
   /* color: #09113e; */
   overflow: overlay;
-  font-weight: 400;
-  /* padding: 0px 8px 0px 0px; */
   scrollbar-gutter: stable;
 }
 h1 {
@@ -91,8 +89,11 @@ li {
     width: 100%;
   }
 }
+.full-bg {
+  transition: background-color 0.75s ease, color 2s ease;
+}
 .main-body {
-  min-height: calc(100vh - 75px);
+  height: calc(100vh - 75px);
   /* background: linear-gradient(0deg, #b5ccea, #e4e8f1); */
   background-size: 300% 300%;
   border-radius: 1px;
@@ -101,10 +102,17 @@ li {
   align-items: center;
   animation: grow-x 0.4s ease-in-out;
   width: calc(100vw - 20px);
-  padding-top: 110px;
-  transition: background-color 0.5s ease; /* Smooth transition for background color */
-}
+  transition: color 0.25s ease;
 
+}
+.section-body {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 110px;
+}
 .background-gradient {
   background: linear-gradient(75deg, #e4e8f1, #b0c7e5);
   background-size: 400% 400%;
@@ -166,7 +174,7 @@ li {
   height: 100vh;
   z-index: 1000;
   transform: translateX(-150%);
-  animation: switchCompsLeft ease-in-out 1.3s;
+  animation: closeGateLeft ease-in-out 1.3s;
 }
 .white-block-right {
   position: fixed;
@@ -174,9 +182,9 @@ li {
   height: 100vh;
   z-index: 1000;
   transform: translateX(150%);
-  animation: switchCompsRight ease-in-out 1.3s;
+  animation: closeGateRight ease-in-out 1.3s;
 }
-@keyframes switchCompsLeft {
+@keyframes closeGateLeft {
   0%,
   100% {
     transform: translateX(-150%);
@@ -186,7 +194,7 @@ li {
     transform: translateX(-45%);
   }
 }
-@keyframes switchCompsRight {
+@keyframes closeGateRight {
   0%,
   100% {
     transform: translateX(150%);
@@ -243,7 +251,7 @@ li {
   display: flex;
   overflow: scroll;
   justify-content: space-between;
-  top: 140px;
+  top: 80px;
   opacity: 0;
   animation: slideIn 1s forwards 1.25s;
 }
@@ -319,10 +327,13 @@ li {
   position: absolute;
   animation: slideIn 2s;
 }
-
 .welcome-left {
   width: 60%;
   padding-left: 100px;
+}
+.easy-see:hover {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.65);
 }
 .welcome-right {
   width: 40%;
@@ -775,4 +786,3 @@ li {
       inset 0 0 30px #ff00cc;
   }
 }
-

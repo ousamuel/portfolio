@@ -1,5 +1,5 @@
 import { Image } from "@nextui-org/react";
-export default function AboutComp() {
+export default function AboutComp({isDarkMode}) {
   return (
     <section id="about" className="container text-4xl mt-10">
       <div className="welcome-right ">
@@ -32,10 +32,9 @@ export default function AboutComp() {
       </div>
       <div className="welcome-left about-section">
         <h1 className=" pl-6">About me</h1>
-        <p className="text-lg p-6 lower">
-          My name is <span className="">Samuel Ou</span> and I am a
-          graduate from{" "}
-          <span className="text-red-600">Stony Brook University</span> and{" "}
+        <p className={`text-lg p-6 lower ${!isDarkMode && "easy-see"}`}>
+          My name is <span className="">Samuel Ou</span> and I am a graduate
+          from <span className="text-red-600">Stony Brook University</span> and{" "}
           <span className="text-blue-600"> Flatiron Bootcamp</span> <br />
           <br />
           As a developer, I specialize in solving technical problems, finding
@@ -65,9 +64,7 @@ export default function AboutComp() {
       </AnimatedSection> */}
       </div>
 
-      <div>
-
-      </div>
+      <div></div>
     </section>
   );
 }

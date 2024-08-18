@@ -1,14 +1,28 @@
 "use client";
 import "./globals.css";
 import "animate.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import * as React from "react";
 import { NextUIProvider } from "@nextui-org/react";
 import { Providers, Context } from "./providers";
-import GoogleAnalytics from "./GoogleAnalytics";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    const threeScript = document.createElement("script");
+    threeScript.setAttribute("id", "threeScript");
+    threeScript.setAttribute(
+      "src",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+    );
+    document.getElementsByTagName("head")[0].appendChild(threeScript);
+    return () => {
+      if (threeScript) {
+        threeScript.remove();
+      }
+    };
+  }, []);
   return (
     <html lang="en">
       <head>

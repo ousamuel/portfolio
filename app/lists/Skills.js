@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "@nextui-org/react";
-import AnimatedSection from "./Animated";
+import AnimatedSection from "../Animated";
 const frontendSkills = [
   { name: "JavaScript", src: "/logos/javascript.svg", alt: "js-logo" },
   { name: "React", src: "/logos/react.svg", alt: "react-logo" },
