@@ -12,6 +12,7 @@ export default function Header({ hide }) {
   const email = "mailto:samuelou510@gmail.com";
   return (
     <nav className="navbar px-10 bg-transparent">
+      {/* <div className="fixed ">hello</div> */}
       <span className="float-right font-bold text-2xl flex">
         <Link
           color="foreground"

@@ -1,5 +1,23 @@
+"use client";
+import { useEffect, useState } from "react";
 import { Image } from "@nextui-org/react";
-export default function AboutComp({isDarkMode}) {
+export default function AboutComp({ isDarkMode }) {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    if (scrollY + windowHeight >= documentHeight) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+  };
   return (
     <section id="about" className="container text-4xl mt-10">
       <div className="welcome-right ">

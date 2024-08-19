@@ -20,27 +20,11 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isPageReady, setIsPageReady] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
   const [selectedComponent, setSelectedComponent] = useState(0);
   const allButtons = ["Home", "About", "Experience", "Projects"];
   const [vantaEffect, setVantaEffect] = useState(null);
-  const [darkNote, setDarkNote] = useState(false);
   const vantaRef = useRef(null);
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-  // const handleScroll = () => {
-  //   const scrollY = window.scrollY;
-  //   const windowHeight = window.innerHeight;
-  //   const documentHeight = document.documentElement.scrollHeight;
-  //   if (scrollY + windowHeight >= documentHeight) {
-  //     setIsVisible(false);
-  //   } else {
-  //     setIsVisible(true);
-  //   }
-  // };
+ 
   const loadComponent = () => {
     switch (selectedComponent) {
       case 1:
@@ -78,12 +62,12 @@ export default function Home() {
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          scale: 1.0,
+          scale: 0.75,
           scaleMobile: 1.0,
           color: isDarkMode ? 0x6f7cb6 : 0xe1825,
           shininess: isDarkMode ? 20 : 0,
           waveSpeed: 0.7,
-          zoom: 0.81,
+          zoom: 1,
         })
       );
     }, transitionTime / 2);
@@ -102,7 +86,7 @@ export default function Home() {
     };
   }, []);
   useEffect(() => {
-    if (isPageReady && vantaRef.current && !vantaEffect) {
+    if (!isLoading && vantaRef.current && !vantaEffect) {
       setVantaEffect(
         WAVES({
           el: vantaRef.current,
@@ -129,7 +113,7 @@ export default function Home() {
   return (
     <div
       className={`flex flex-col px-[10px] pb-[10px] items-center full-bg ${
-        isDarkMode ? "bg-black text-gray-200" : "bg-white text-[#09113e]"
+        isDarkMode ? "bg-black text-[#e9ecef]" : "bg-white text-[#09113e]"
       }`}
     >
       <Header />
@@ -142,9 +126,9 @@ export default function Home() {
           alt="logo"
           onClick={handleDarkMode}
         />
-      </div>
-      <div className="open-left-gate"></div>
-      <div className="open-right-gate"></div>
+      </div>{" "}
+      {/* <div className="open-left-gate"></div>
+      <div className="open-right-gate"></div> */}
       <div
         style={{ backgroundColor: isDarkMode ? "black" : "white" }}
         className={` ${switchingComps ? `left-gate full-bg` : ""}`}
@@ -159,7 +143,7 @@ export default function Home() {
             return (
               <Button
                 key={i}
-                className={selectedComponent == i ? "bg-blue-400 mx-1" : "mx-1"}
+                className={selectedComponent == i ? "bg-blue-400 mx-1 nav-btn" : "mx-1 nav-btn"}
                 onClick={() => handleButton(i)}
               >
                 {btnName}

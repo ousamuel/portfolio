@@ -14,7 +14,7 @@ export default function HomeComp() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const name = ["S", "a", "m", "u", "e", "l", "O", "u"];
   return (
-    <section id="welcome" className="container text-6xl flex pb-[200px]">
+    <section id="welcome" className="container text-6xl flex pb-[140px]">
       <div className="welcome-left my-auto">
         {/* <h3 className="opening-slide font-bold">Samuel Ou</h3> */}
         <h3 className="flex font-bold name">
@@ -62,6 +62,7 @@ export default function HomeComp() {
             </ModalContent>
           </Modal>
         </span>
+        <p className='text-sm mt-4 dark-cycle '>Click the logo to toggle dark mode</p>
       </div>
       <div className="welcome-right flex flex-col m-auto">
         <img

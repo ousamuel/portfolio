@@ -81,16 +81,9 @@ section {
 li {
   text-align: left;
 }
-@keyframes grow-x {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 100%;
-  }
-}
+
 .full-bg {
-  transition: background-color 0.75s ease, color 2s ease;
+  transition: background-color 0.75s ease;
 }
 .main-body {
   height: calc(100vh - 75px);
@@ -100,9 +93,16 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* animation: grow-x 0.4s ease-in-out; */
+  animation: grow-x 0.4s ease-in-out;
   width: calc(100vw - 20px);
-  transition: color 0.25s ease;
+}
+@keyframes grow-x {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .section-body {
   overflow-y: scroll;
@@ -210,7 +210,7 @@ li {
   height: 100vh;
   z-index: 1000;
   transform: translateX(-150%);
-  animation: openGateLeft ease-in-out 0.4s;
+  animation: openGateLeft ease-in-out 0.6s;
 }
 .open-right-gate {
   background-color: white;
@@ -219,7 +219,7 @@ li {
   height: 100vh;
   z-index: 1000;
   transform: translateX(150%);
-  animation: openGateRight ease-in-out 0.4s;
+  animation: openGateRight ease-in-out 0.6s;
 }
 @keyframes openGateRight {
   0% {
@@ -274,11 +274,17 @@ li {
 .buttons {
   position: absolute;
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: visible;
   justify-content: space-between;
   top: 80px;
   opacity: 0;
   animation: slideIn 1s forwards 1.25s;
+}
+.nav-btn:hover {
+  background-color: #a7daff;
+  scale: 1.05;
+  animation: scale 1s ease-in-out;
 }
 .bio {
   font-size: 25px;
@@ -367,7 +373,7 @@ li {
 .container {
   width: 100%;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   flex-wrap: wrap;
 }
@@ -645,7 +651,34 @@ li {
   animation: shadow 2s;
 }
 .coin:hover {
-  scale: 1.05;
+  animation: coin-bounce 1.5s infinite;
+  /* scale: 1.05; */
+}
+@keyframes coin-bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  20%,
+  40% {
+    transform: translateY(10px);
+  }
+  30% {
+    transform: translateY(5px);
+  }
+}
+.dark-cycle {
+  animation: dark-cycle-keyframe 3s infinite;
+}
+@keyframes dark-cycle-keyframe {
+  0%,
+  100% {
+    color: #09113e;
+  }
+  35%,
+  60% {
+    color: #e9ecef;
+  }
 }
 .black-shadow {
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
