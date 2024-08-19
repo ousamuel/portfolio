@@ -208,7 +208,7 @@ li {
   height: 100vh;
   z-index: 1000;
   transform: translateX(-150%);
-  animation: openGateLeft ease-in-out 0.6s 0.4s;
+  animation: openGateLeft ease-in-out 0.6s 0.2s;
 }
 .open-right-gate {
   background-color: white;
@@ -217,7 +217,7 @@ li {
   height: 100vh;
   z-index: 1000;
   transform: translateX(150%);
-  animation: openGateRight ease-in-out 0.6s 0.4s;
+  animation: openGateRight ease-in-out 0.6s 0.2s;
 }
 @keyframes openGateLeft {
   0% {
