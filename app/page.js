@@ -127,8 +127,8 @@ export default function Home() {
           onClick={handleDarkMode}
         />
       </div>{" "}
-      {/* <div className="open-left-gate"></div>
-      <div className="open-right-gate"></div> */}
+      <div className="open-left-gate"></div>
+      <div className="open-right-gate"></div>
       <div
         style={{ backgroundColor: isDarkMode ? "black" : "white" }}
         className={` ${switchingComps ? `left-gate full-bg` : ""}`}
