@@ -85,7 +85,7 @@ li {
   transition: background-color 0.75s ease;
 }
 .main-body {
-  height: calc(100vh - 75px);
+  height: calc(100vh - 65px);
   /* background: linear-gradient(0deg, #b5ccea, #e4e8f1); */
   background-size: 300% 300%;
   border-radius: 1px;
@@ -109,7 +109,7 @@ li {
   height: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 130px;
+  padding-top: 70px;
 }
 .background-gradient {
   background: linear-gradient(75deg, #e4e8f1, #b0c7e5);
@@ -283,13 +283,19 @@ li {
   display: flex;
   overflow-x: scroll;
   overflow-y: visible;
-  justify-content: space-between;
-  top: 80px;
+  justify-content: space-evenly;
   opacity: 0;
-  animation: slideIn 1s forwards 1.25s;
+  /* top: 12px; */
+  /* right: 25px; */
+  animation: slideIn 1s forwards 1.5s;
+}
+.nav-btn {
+  padding: 5px;
+  border-radius: 5px;
 }
 .nav-btn:hover {
-  background-color: #a7daff;
+  cursor: pointer;
+  background-color: #2195f378;
   scale: 1.05;
   animation: scale 1s ease-in-out;
 }
@@ -298,23 +304,23 @@ li {
   line-height: 1.3;
   width: 80%;
   opacity: 0;
-  animation: slideIn 1s forwards 1.25s;
+  animation: slideIn 1s forwards 1.5s;
 }
 .home-logo {
   opacity: 0;
   width: 100%;
   max-width: 600px;
-  animation: slideIn 1s forwards 1.25s;
+  animation: slideIn 1s forwards 1.5s;
   padding-top: 50px;
 }
 .opening-slide {
   opacity: 0;
-  animation: slideIn 1s forwards 0.75s;
+  animation: slideIn 1s forwards 0.9s;
   /* animation-delay: 5s; */
 }
 .resume {
   opacity: 0;
-  animation: slideIn 1s forwards 1.25s;
+  animation: slideIn 1s forwards 1.5s;
 }
 .resume-pop {
   background-color: #9bc8d5;
@@ -409,8 +415,8 @@ li {
 .navbar {
   /* width: 90%; */
   opacity: 0;
-  height: 65px;
-  right: 0px;
+  height: 50px;
+  left: 0px;
   z-index: 10001;
   display: flex;
   vertical-align: middle;
@@ -637,7 +643,7 @@ li {
   65%,
   100% {
     opacity: 1;
-    height: 120px;
+    height: 105px;
     transform: translateY(5px) rotateY(360deg);
   }
 }
@@ -654,7 +660,7 @@ li {
   z-index: 1001;
   border-radius: 100%;
   top: 5px;
-  height: 120px;
+  height: 105px;
 }
 .coin:hover {
   animation: coin-bounce 1.5s infinite;
@@ -675,7 +681,7 @@ li {
 }
 .dark-cycle {
   opacity: 0;
-  animation: slideIn 1s forwards 2s, dark-cycle-keyframe 3s infinite 3s;
+  animation: slideIn 1s forwards 1.5s, dark-cycle-keyframe 3s infinite 3s;
 }
 @keyframes dark-cycle-keyframe {
   0%,
@@ -832,12 +838,31 @@ li {
 .images-box {
   display: flex;
   overflow-x: scroll;
-  width: auto;
 }
-.image-card {
-  margin-right: 50px;
-  display: block;
-  max-width: 90vw;
-  max-height: 50vh;
-  height: auto;
+.image-card-vert {
+  height: 50vh;
+  width: 35vh;
+  position: absolute;
+  border-radius: 5px;
+  transition: transform 0.5s ease; /* Smooth transition for transform property */
+}
+/* .images-box :nth-child(2) {
+  transform: translateX(10px) ;
+}
+.images-box :nth-child(3) {
+  transform: translateX(20px);
+} */
+.pop-move-5 {
+  transform: translateX(10px) rotate(5deg);
+}
+.pop-move-10 {
+  transform: translateX(20px) rotate(10deg);
+}
+@keyframes pop-move-5 {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(10px) rotate(5deg);
+  }
 }

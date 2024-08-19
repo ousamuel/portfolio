@@ -30,7 +30,7 @@ export default function Home() {
       case 1:
         return <AboutComp isDarkMode={isDarkMode} />;
       case 2:
-        return <ExperienceComp isDarkMode={isDarkMode}/>;
+        return <ExperienceComp isDarkMode={isDarkMode} />;
       case 3:
         return <ProjectsComp isDarkMode={isDarkMode} />;
       default:
@@ -64,7 +64,7 @@ export default function Home() {
           gyroControls: false,
           scale: 0.75,
           scaleMobile: 1.0,
-          color: isDarkMode ? 0x96adff : 0xe1825,
+          color: isDarkMode ? 0x7b90ff : 0xe1825,
           shininess: 0,
           waveSpeed: 0.7,
           zoom: 0.81,
@@ -87,7 +87,7 @@ export default function Home() {
           gyroControls: false,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x96adff,
+          color: 0x7b90ff,
           shininess: 0,
           waveSpeed: 0.7,
           zoom: 0.81,
@@ -120,7 +120,7 @@ export default function Home() {
       <div className="open-left-gate"></div>
       <div className="open-right-gate"></div>
       <Header />
-      <div className="flex flex-col items-center justify-center h-[65px]">
+      <div className="flex flex-col items-center justify-center h-[55px]">
         <img
           className={`z-50 coin cursor-pointer ${
             isDarkMode ? "white-shadow" : "black-shadow"
@@ -139,20 +139,20 @@ export default function Home() {
         className={` ${switchingComps ? `right-gate full-bg` : ""}`}
       ></div>
       <main ref={vantaRef} className="main-body">
-        <div className="buttons z-40 w-5/6 md:w-3/5 max-w-[500px]">
+        <div className="buttons z-40 top-[60px] w-full md:top-[12px] md:right-[25px] md:w-[35%]">
           {allButtons.map((btnName, i) => {
             return (
-              <Button
+              <p
                 key={i}
                 className={
                   selectedComponent == i
-                    ? "bg-blue-400 mx-1 nav-btn"
-                    : "mx-1 nav-btn"
+                    ? `${isDarkMode ? "bg-blue-600" : "bg-blue-400"} nav-btn`
+                    : "nav-btn"
                 }
                 onClick={() => handleButton(i)}
               >
                 {btnName}
-              </Button>
+              </p>
             );
           })}
         </div>

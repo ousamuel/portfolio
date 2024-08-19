@@ -2,9 +2,12 @@
 import { useEffect, useState } from "react";
 import { Image } from "@nextui-org/react";
 import Photos from "../lists/Photos";
+import { motion } from "framer-motion";
+
 export default function AboutComp({ isDarkMode }) {
   const [isVisible, setIsVisible] = useState(true);
   const [openImages, setOpenImages] = useState(false);
+  const [hoveringImage, setHoveringImage] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -86,33 +89,50 @@ export default function AboutComp({ isDarkMode }) {
       </div>
 
       {/* <div className="w-full pb-10 px-6 ">
-        <h3 className="text-center mb-6">Hobbies</h3>
-        <div className="flex w-full justify-evenly">
-          <h4
-            className={
-              !openImages &&
-              "w-1/3 flex flex-col justify-center items-center text-center"
-            }
+        <h3 className="text-center mb-6">
+          Hobbies{" "}
+          <button
+            onClick={() => {
+              setOpenImages((prev) => !prev);
+            }}
           >
-            Photography <br /> <small>Collection of my favorite shots</small>
-          </h4>
-          <div className="images-box">
-            {!openImages ? (
-              <Image
-                className="image-card"
+            openimages
+          </button>
+        </h3>
+
+        <div className="flex w-full justify-evenly h-fit">
+          {!openImages && (
+            <h4 className="w-1/3 flex flex-col justify-center items-center text-center">
+              Photography <br /> <small>Collection of my favorite shots</small>
+              {hoveringImage && "hovering"}
+            </h4>
+          )}
+          <div
+            className="images-box w-1/3 cursor-pointer"
+            onMouseOver={() => setHoveringImage(true)}
+            onMouseLeave={() => setHoveringImage(false)}
+          >
+            <div>
+              <motion.img
+                className="image-card-vert z-[60]"
                 src="/photos/bk-bridge.jpeg"
                 alt="bk-bridge"
-              ></Image>
-            ) : (
-              Photos.map((photo) => (
-                <Image
-                  className="image-card"
-                  alt="asd"
-                  src={photo.src}
-                  key={photo.src}
-                />
-              ))
-            )}
+              ></motion.img>
+              <img
+                className={`image-card-vert z-50 ${
+                  hoveringImage && "pop-move-5"
+                }`}
+                src="/photos/tunnel.jpeg"
+                alt="tunnel"
+              ></img>
+              <img
+                className={`image-card-vert z-40 ${
+                  hoveringImage && "pop-move-10"
+                }`}
+                src="/photos/alley.jpeg"
+                alt="alley"
+              ></img>
+            </div>
           </div>
         </div>
       </div> */}

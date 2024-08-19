@@ -1,7 +1,7 @@
 "use client";
 import { useContext, useState, useEffect } from "react";
 import Link from "next/link";
-import { Image, Divider } from "@nextui-org/react";
+import { Image, Divider, Button } from "@nextui-org/react";
 import { Context } from "./providers";
 
 export default function Header({ hide }) {
@@ -10,8 +10,27 @@ export default function Header({ hide }) {
   const github = "https://github.com/ousamuel";
   const linkedIn = "https://www.linkedin.com/in/samuel-ou-0510s/";
   const email = "mailto:samuelou510@gmail.com";
+  const allButtons = ["Home", "About", "Experience", "Projects"];
+
   return (
     <nav className="navbar px-10 bg-transparent">
+      {/* <div className="buttons z-40 w-5/6 md:w-3/5 max-w-[500px]">
+          {allButtons.map((btnName, i) => {
+            return (
+              <Button
+                key={i}
+                className={
+                  selectedComponent == i
+                    ? "bg-blue-400 mx-1 nav-btn"
+                    : "mx-1 nav-btn"
+                }
+                onClick={() => handleButton(i)}
+              >
+                {btnName}
+              </Button>
+            );
+          })}
+        </div> */}
       {/* <div className="fixed ">hello</div> */}
       <span className="float-right font-bold text-2xl flex">
         <Link
