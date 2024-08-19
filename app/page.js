@@ -24,13 +24,13 @@ export default function Home() {
   const allButtons = ["Home", "About", "Experience", "Projects"];
   const [vantaEffect, setVantaEffect] = useState(null);
   const vantaRef = useRef(null);
- 
+
   const loadComponent = () => {
     switch (selectedComponent) {
       case 1:
         return <AboutComp isDarkMode={isDarkMode} />;
       case 2:
-        return <ExperienceComp />;
+        return <ExperienceComp isDarkMode={isDarkMode}/>;
       case 3:
         return <ProjectsComp isDarkMode={isDarkMode} />;
       default:
@@ -64,10 +64,10 @@ export default function Home() {
           gyroControls: false,
           scale: 0.75,
           scaleMobile: 1.0,
-          color: isDarkMode ? 0x6f7cb6 : 0xe1825,
-          shininess: isDarkMode ? 20 : 0,
+          color: isDarkMode ? 0x96adff : 0xe1825,
+          shininess: 0,
           waveSpeed: 0.7,
-          zoom: 1,
+          zoom: 0.81,
         })
       );
     }, transitionTime / 2);
@@ -75,16 +75,7 @@ export default function Home() {
       setSwitchingComps(false);
     }, transitionTime);
   };
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2650);
-    const finishedLoading = setTimeout(() => {
-      setIsPageReady(true);
-    }, 3050);
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(finishedLoading);
-    };
-  }, []);
+
   useEffect(() => {
     if (!isLoading && vantaRef.current && !vantaEffect) {
       setVantaEffect(
@@ -96,8 +87,8 @@ export default function Home() {
           gyroControls: false,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x6f7cb6,
-          shininess: 20,
+          color: 0x96adff,
+          shininess: 0,
           waveSpeed: 0.7,
           zoom: 0.81,
         })
@@ -107,13 +98,23 @@ export default function Home() {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [isPageReady, vantaEffect]);
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 2650);
+    const finishedLoading = setTimeout(() => {
+      setIsPageReady(true);
+    }, 3050);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(finishedLoading);
+    };
+  }, []);
   if (isLoading) {
     return <SpinCoin />;
   }
   return (
     <div
       className={`flex flex-col px-[10px] pb-[10px] items-center full-bg ${
-        isDarkMode ? "bg-black text-[#e9ecef]" : "bg-white text-[#09113e]"
+        isDarkMode ? "bg-[#00051f] text-[#e9ecef]" : "bg-white text-[#09113e]"
       }`}
     >
       <div className="open-left-gate"></div>
@@ -129,13 +130,12 @@ export default function Home() {
           onClick={handleDarkMode}
         />
       </div>{" "}
-      
       <div
-        style={{ backgroundColor: isDarkMode ? "black" : "white" }}
+        style={{ backgroundColor: isDarkMode ? "#00051f" : "white" }}
         className={` ${switchingComps ? `left-gate full-bg` : ""}`}
       ></div>
       <div
-        style={{ backgroundColor: isDarkMode ? "black" : "white" }}
+        style={{ backgroundColor: isDarkMode ? "#00051f" : "white" }}
         className={` ${switchingComps ? `right-gate full-bg` : ""}`}
       ></div>
       <main ref={vantaRef} className="main-body">
@@ -144,7 +144,11 @@ export default function Home() {
             return (
               <Button
                 key={i}
-                className={selectedComponent == i ? "bg-blue-400 mx-1 nav-btn" : "mx-1 nav-btn"}
+                className={
+                  selectedComponent == i
+                    ? "bg-blue-400 mx-1 nav-btn"
+                    : "mx-1 nav-btn"
+                }
                 onClick={() => handleButton(i)}
               >
                 {btnName}

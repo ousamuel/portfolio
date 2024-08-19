@@ -51,7 +51,7 @@ html {
   font-style: normal;
 }
 body {
-  /* color: #09113e; */
+  /* color: #00e4b3; */
   overflow: overlay;
   scrollbar-gutter: stable;
 }
@@ -68,6 +68,7 @@ h3 {
 }
 p {
   line-height: 1.4;
+  /* background-color: #00051f; */
 }
 main {
   /* box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5); */

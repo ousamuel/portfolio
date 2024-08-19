@@ -6,7 +6,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 import Certs from "../lists/Certs";
 import SkillsList from "../lists/Skills";
-export default function ExperienceComp() {
+export default function ExperienceComp({ isDarkMode }) {
   return (
     <div className="flex flex-col pt-6">
       <section
@@ -24,7 +24,7 @@ export default function ExperienceComp() {
           <VerticalTimelineElement
             visible={true}
             className="vertical-timeline-element--work"
-            dateClassName=""
+            dateClassName={isDarkMode ? "text-[#00e4b3]" : "text-black"}
             contentStyle={{ background: "#000000", color: "#00e4b3" }}
             contentArrowStyle={{ borderRight: "7px solid  #000000" }}
             date="Jul 2024 - present"
