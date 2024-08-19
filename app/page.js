@@ -27,20 +27,20 @@ export default function Home() {
   const [darkNote, setDarkNote] = useState(false);
   const vantaRef = useRef(null);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-    if (scrollY + windowHeight >= documentHeight) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  };
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+  // const handleScroll = () => {
+  //   const scrollY = window.scrollY;
+  //   const windowHeight = window.innerHeight;
+  //   const documentHeight = document.documentElement.scrollHeight;
+  //   if (scrollY + windowHeight >= documentHeight) {
+  //     setIsVisible(false);
+  //   } else {
+  //     setIsVisible(true);
+  //   }
+  // };
   const loadComponent = () => {
     switch (selectedComponent) {
       case 1:
@@ -92,9 +92,14 @@ export default function Home() {
     }, transitionTime);
   };
   useEffect(() => {
+    setSwitchingComps(true);
     const timer = setTimeout(() => setIsLoading(false), 2650);
-    const finishedLoading = setTimeout(() => setIsPageReady(true), 3050);
-    
+    const finishedLoading = setTimeout(() => {
+      setIsPageReady(true);
+    }, 3050);
+    setTimeout(() => {
+      setSwitchingComps(false);
+    }, 4500);
     return () => {
       clearTimeout(timer);
       clearTimeout(finishedLoading);
@@ -150,7 +155,7 @@ export default function Home() {
         style={{ backgroundColor: isDarkMode ? "black" : "white" }}
         className={` ${switchingComps ? `white-block-right full-bg` : ""}`}
       ></div>
-      <main ref={vantaRef} className={`main-body `}>
+      <main ref={vantaRef} className="main-body">
         <div className="buttons z-40 w-5/6 md:w-3/5 max-w-[500px]">
           {allButtons.map((btnName, i) => {
             return (
