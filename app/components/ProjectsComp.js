@@ -47,7 +47,9 @@ export default function ProjectsComp({ isDarkMode }) {
             // project: title, live, src, github, description
 
             return (
-              <div
+              <a
+                href={project.github}
+                target="_blank"
                 key={i}
                 className={`p-4 ml-4 ${
                   isDarkMode ? "hover:bg-gray-900" : "hover:bg-[#ecf0fa]"
@@ -61,10 +63,8 @@ export default function ProjectsComp({ isDarkMode }) {
               >
                 <div className="flex justify-between">
                   <strong>{project.title}</strong>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className={`flex hover:bg-gray-200 px-2 py-1 rounded-sm ${
+                  <span
+                    className={`flex px-2 py-1 rounded-sm ${
                       selectedSrc == project.src
                         ? "fade-in-bouncing-arrow show"
                         : "fade-in-bouncing-arrow"
@@ -80,12 +80,12 @@ export default function ProjectsComp({ isDarkMode }) {
                       width={24}
                       alt="githublogo"
                     />
-                  </a>
+                  </span>
                 </div>
                 <p className={selectedSrc == project.src ? `pt-1` : "hidden"}>
                   {project.description}
                 </p>
-              </div>
+              </a>
             );
           })}
         </section>
