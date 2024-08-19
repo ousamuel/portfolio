@@ -116,6 +116,8 @@ export default function Home() {
         isDarkMode ? "bg-black text-[#e9ecef]" : "bg-white text-[#09113e]"
       }`}
     >
+      <div className="open-left-gate"></div>
+      <div className="open-right-gate"></div>
       <Header />
       <div className="flex flex-col items-center justify-center h-[65px]">
         <img
@@ -127,8 +129,7 @@ export default function Home() {
           onClick={handleDarkMode}
         />
       </div>{" "}
-      <div className="open-left-gate"></div>
-      <div className="open-right-gate"></div>
+      
       <div
         style={{ backgroundColor: isDarkMode ? "black" : "white" }}
         className={` ${switchingComps ? `left-gate full-bg` : ""}`}

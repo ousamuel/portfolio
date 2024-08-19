@@ -108,7 +108,7 @@ li {
   height: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 110px;
+  padding-top: 130px;
 }
 .background-gradient {
   background: linear-gradient(75deg, #e4e8f1, #b0c7e5);
@@ -654,7 +654,6 @@ li {
   border-radius: 100%;
   top: 5px;
   height: 120px;
-  animation: shadow 2s;
 }
 .coin:hover {
   animation: coin-bounce 1.5s infinite;
