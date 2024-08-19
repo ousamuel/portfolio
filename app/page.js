@@ -92,14 +92,10 @@ export default function Home() {
     }, transitionTime);
   };
   useEffect(() => {
-    setSwitchingComps(true);
     const timer = setTimeout(() => setIsLoading(false), 2650);
     const finishedLoading = setTimeout(() => {
       setIsPageReady(true);
     }, 3050);
-    setTimeout(() => {
-      setSwitchingComps(false);
-    }, 4500);
     return () => {
       clearTimeout(timer);
       clearTimeout(finishedLoading);
@@ -147,13 +143,15 @@ export default function Home() {
           onClick={handleDarkMode}
         />
       </div>
+      <div className="open-left-gate"></div>
+      <div className="open-right-gate"></div>
       <div
         style={{ backgroundColor: isDarkMode ? "black" : "white" }}
-        className={` ${switchingComps ? `white-block-left full-bg` : ""}`}
+        className={` ${switchingComps ? `left-gate full-bg` : ""}`}
       ></div>
       <div
         style={{ backgroundColor: isDarkMode ? "black" : "white" }}
-        className={` ${switchingComps ? `white-block-right full-bg` : ""}`}
+        className={` ${switchingComps ? `right-gate full-bg` : ""}`}
       ></div>
       <main ref={vantaRef} className="main-body">
         <div className="buttons z-40 w-5/6 md:w-3/5 max-w-[500px]">
