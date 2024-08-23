@@ -61,7 +61,7 @@ export default function ProjectsComp({ isDarkMode }) {
                   setSelectedSrc(project.src);
                 }}
               >
-                <div className="flex justify-between">
+                <div className="flex justify-between text-xl">
                   <strong>{project.title}</strong>
                   <span
                     className={`flex px-2 py-1 rounded-sm ${
@@ -139,3 +139,101 @@ export default function ProjectsComp({ isDarkMode }) {
           </Card>
         ))} */
 }
+
+// import { projects } from "../lists/Projects";
+// import { useState, useRef } from "react";
+
+// export default function ProjectsComp({ isDarkMode }) {
+//   const [selectedSrc, setSelectedSrc] = useState(null);
+//   const videoRefs = useRef([]); // Create an array of refs for the videos
+
+//   const handleMouseEnter = (index, videoSrc) => {
+//     setSelectedSrc(videoSrc);
+//     if (videoRefs.current[index]) {
+//       // videoRefs.current[index].currentTime = 0; // Reset video to start
+//       videoRefs.current[index].playbackRate = 1.5; // Set playback speed to 1.5x
+
+//       videoRefs.current[index].play(); // Play the video
+//     }
+//   };
+
+//   const handleMouseLeave = (index) => {
+//     setSelectedSrc(null);
+//     if (videoRefs.current[index]) {
+//       videoRefs.current[index].pause(); // Pause video on mouse leave
+//     }
+//   };
+
+//   return (
+//     <div className="flex flex-col w-full">
+//       <h1 className="mt-4 text-center ">Projects</h1>
+//       <div id="projects" className="flex w-full px-4">
+//         <section className="w-full md:w-2/5 flex flex-col justify-center">
+//           {projects.map((project, i) => (
+//             <a
+//               href={project.github}
+//               target="_blank"
+//               key={i}
+//               className={`p-4 ml-4 ${
+//                 isDarkMode ? "hover:bg-gray-900" : "hover:bg-[#ecf0fa]"
+//               }`}
+//               onMouseEnter={() => handleMouseEnter(i, project.vid)}
+//               onMouseLeave={() => handleMouseLeave(i)}
+//             >
+//               <div className="flex justify-between text-xl">
+//                 <strong>{project.title}</strong>
+//                 <span
+//                   className={`flex px-2 py-1 rounded-sm ${
+//                     selectedSrc === project.src
+//                       ? "fade-in-bouncing-arrow show"
+//                       : "fade-in-bouncing-arrow"
+//                   }`}
+//                 >
+//                   <img
+//                     src="/images/right-arrow.svg"
+//                     width={24}
+//                     alt="right-arrow"
+//                   />
+//                   <img
+//                     src="/logos/githubblack.svg"
+//                     width={24}
+//                     alt="githublogo"
+//                   />
+//                 </span>
+//               </div>
+//               <p className={selectedSrc === project.vid ? `pt-1` : "hidden"}>
+//                 {project.description} <br />
+//                 {project.muted && "(In-depth video + audio)"}
+//               </p>
+//             </a>
+//           ))}
+//         </section>
+//         <section className="hidden md:flex md:w-3/5 relative">
+//           <div className="absolute w-full h-full flex justify-center items-center">
+//             {selectedSrc ? "" : `Choose any Project to Learn More`}
+//             <br />
+//           </div>
+//           {projects.map((project, i) => (
+//             <video
+//               key={i}
+//               ref={(el) => (videoRefs.current[i] = el)} // Assign each video element to the corresponding ref
+//               className={
+//                 selectedSrc === project.vid
+//                   ? "fade-in-out-projects show"
+//                   : "fade-in-out-projects"
+//               }
+//               id="myVideo"
+//               muted={project.muted}
+//               autoPlay={selectedSrc === project.vid} // Only autoplay when selected
+//               loop
+//             >
+//               <source src={project.vid} type="video/mp4" />
+//               <img src={project.src} alt="selected-hover-img" />
+//               Your browser does not support the video tag.
+//             </video>
+//           ))}
+//         </section>
+//       </div>
+//     </div>
+//   );
+// }

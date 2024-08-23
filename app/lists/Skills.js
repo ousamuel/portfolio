@@ -23,6 +23,7 @@ const backendSkills = [
   { name: "SQL", src: "/logos/sql.svg", alt: "sql-logo" },
   { name: "PostgreSQL", src: "/logos/postgres.svg", alt: "postgres-logo" },
 ];
+// : AWS, OpenAI, Groq, Pinecone, Jupyter, Firebase, PostgreSQL, MongoDB, Git
 {
   /* Front end: html, css js, react, tailwinds, query?? Bootstrap
 Back end: next js mysql, restful api, python

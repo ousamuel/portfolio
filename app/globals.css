@@ -416,7 +416,7 @@ li {
   /* width: 90%; */
   opacity: 0;
   height: 50px;
-  left: 0px;
+  right: 0px;
   z-index: 10001;
   display: flex;
   vertical-align: middle;
@@ -803,6 +803,7 @@ li {
 
 /* PROJECTS PAGE CSS */
 .fade-in-out-projects {
+  display: hidden;
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
   width: 100%;
@@ -810,6 +811,7 @@ li {
 }
 
 .fade-in-out-projects.show {
+  display: flex;
   opacity: 1;
 }
 .fade-in-bouncing-arrow {
