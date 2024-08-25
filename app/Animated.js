@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const AnimatedSection = ({ children, className, effect, delay }) => {
+const AnimatedSection = ({ children, className, effect, delay, triggerFlip }) => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -9,11 +9,14 @@ const AnimatedSection = ({ children, className, effect, delay }) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.classList.add("show");
+            if (triggerFlip) {
+              setTimeout(triggerFlip, 2500); // Flip after 1 second
+            }
           }, delay);
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 } // Trigger when 10% of the element is visible
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {

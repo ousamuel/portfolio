@@ -15,6 +15,8 @@ import WAVES from "vanta/dist/vanta.waves.min";
 import NET from "vanta/dist/vanta.net.min";
 import * as THREE from "three";
 export default function Home() {
+  const lightBackground = "#FFFFFF";
+  const darkBackground = "#00051f";
   const [switchingComps, setSwitchingComps] = useState(false);
   // for resume
   const [isLoading, setIsLoading] = useState(true);
@@ -108,6 +110,7 @@ export default function Home() {
       clearTimeout(finishedLoading);
     };
   }, []);
+
   if (isLoading) {
     return <SpinCoin />;
   }
@@ -131,11 +134,15 @@ export default function Home() {
         />
       </div>{" "}
       <div
-        style={{ backgroundColor: isDarkMode ? "#00051f" : "white" }}
+        style={{
+          backgroundColor: isDarkMode ? darkBackground : lightBackground,
+        }}
         className={` ${switchingComps ? `left-gate full-bg` : ""}`}
       ></div>
       <div
-        style={{ backgroundColor: isDarkMode ? "#00051f" : "white" }}
+        style={{
+          backgroundColor: isDarkMode ? darkBackground : lightBackground,
+        }}
         className={` ${switchingComps ? `right-gate full-bg` : ""}`}
       ></div>
       <main ref={vantaRef} className="main-body">
@@ -144,11 +151,15 @@ export default function Home() {
             return (
               <p
                 key={i}
-                className={
-                  selectedComponent == i
-                    ? `${isDarkMode ? "bg-blue-600" : "bg-blue-400"} nav-btn`
-                    : "nav-btn"
-                }
+                className={`nav-btn ${
+                  selectedComponent === i
+                    ? isDarkMode
+                      ? "bg-blue-600"
+                      : "bg-blue-400"
+                    : isDarkMode
+                    ? "text-black bg-gray-200"
+                    : "bg-gray-200"
+                }`}
                 onClick={() => handleButton(i)}
               >
                 {btnName}
