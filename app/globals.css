@@ -29,14 +29,17 @@
 :root {
   --foreground-rgb: 0, 0, 0;
 }
-::-webkit-scrollbar-button {
-  display: none;
+::-webkit-scrollbar {
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
+}
+::-webkit-scrollbar-button {
+  display: none;
 }
 
 /* ::-webkit-scrollbar-track {

@@ -148,7 +148,7 @@ export default function Home() {
       <main ref={vantaRef} className="main-body">
         <div
           className="buttons z-40 top-[60px] w-full 
-        g:top-[12px] lg:right-[25px] lg:w-[35%]"
+        lg:top-[12px] lg:right-[25px] lg:w-[35%]"
         >
           {allButtons.map((btnName, i) => {
             return (
