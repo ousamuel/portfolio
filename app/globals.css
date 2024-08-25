@@ -29,8 +29,16 @@
 :root {
   --foreground-rgb: 0, 0, 0;
 }
-::-webkit-scrollbar {
+::-webkit-scrollbar-button {
+  display: none;
 }
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
 /* ::-webkit-scrollbar-track {
   background: #ffffff; 
   Background color of the track
@@ -299,8 +307,8 @@ li {
 .buttons {
   position: absolute;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: visible;
+  /* overflow-x: scroll; */
+  /* overflow-y: visible; */
   justify-content: space-evenly;
   opacity: 0;
   /* top: 12px; */

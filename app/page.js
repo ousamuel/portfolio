@@ -146,7 +146,10 @@ export default function Home() {
         className={` ${switchingComps ? `right-gate full-bg` : ""}`}
       ></div>
       <main ref={vantaRef} className="main-body">
-        <div className="buttons z-40 top-[60px] w-full md:top-[12px] md:right-[25px] md:w-[35%]">
+        <div
+          className="buttons z-40 top-[60px] w-full 
+        g:top-[12px] lg:right-[25px] lg:w-[35%]"
+        >
           {allButtons.map((btnName, i) => {
             return (
               <p
