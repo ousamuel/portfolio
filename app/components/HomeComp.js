@@ -16,9 +16,9 @@ export default function HomeComp() {
   return (
     <section
       id="welcome"
-      className="container text-6xl flex pb-[140px] pt-[15px] md:pt-0"
+      className="container text-7xl flex pb-[140px] pt-[15px] md:pt-0"
     >
-      <div className="welcome-left my-auto">
+      <div className="welcome-left my-auto flex flex-col gap-3">
         {/* <h3 className="opening-slide font-bold">Samuel Ou</h3> */}
         <h3 className="flex font-bold name">
           
@@ -33,7 +33,7 @@ export default function HomeComp() {
             </AnimatedSection>
           ))}
         </h3>
-        <div className="my-4 bio w-full">
+        <div className="bio w-full">
           Software Engineer from <strong>Queens, NY</strong> <br></br>
           Delivering Creative and Strategic Solutions
           <Traits />

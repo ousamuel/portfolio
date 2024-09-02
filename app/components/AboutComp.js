@@ -10,11 +10,11 @@ export default function AboutComp({ isDarkMode }) {
   };
   return (
     <section id="about" className="container text-4xl mt-10">
-      <div className="container min-h-full">
+      <div className="container">
         <div className="welcome-right ">
           <h1 className="pb-2 text-center">Education</h1>
           <ul className="edu">
-            <li className="text-xl flex justify-center items-center my-1">
+            <li className="text-2xl flex justify-center items-center my-1">
               <Image
                 className="mr-2 w-[40px]"
                 src="/logos/sbu.png"
@@ -22,7 +22,7 @@ export default function AboutComp({ isDarkMode }) {
               />
               Stony Brook University
             </li>
-            <li className=" text-xl flex justify-center items-center my-1">
+            <li className="text-xl flex justify-center items-center my-1">
               <Image
                 className="rounded-full mr-2 w-[38px]"
                 src="/logos/flatironlogo.png"
