@@ -1,9 +1,19 @@
 const projects = [
   {
+    github: "https://github.com/ousamuel/ace-it",
+    title: "AceIt",
+    description:
+      "An AI-supported study tool that reinforces the learning experience",
+    src: "/projects/aceit-exams.png",
+    yt: "cA2du63H82c",
+    muted: true,
+    live: "https://ace-it.vercel.app/",
+  },
+  {
     github: "https://github.com/ousamuel/amazon-rainforest",
     title: "Amazon Rainforest Guide",
     description:
-      "All about the Amazon Rainforest - BITS 2024 True Nature Waypoint Contest.",
+      "All about the Amazon Rainforest - Winner of BITS 2024 True Nature Waypoint Contest.",
     src: "/projects/amazon-ss-2.png",
     yt: "cA2du63H82c",
     muted: true,
