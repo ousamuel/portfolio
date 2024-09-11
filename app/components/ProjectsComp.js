@@ -49,7 +49,7 @@ export default function ProjectsComp({ isDarkMode }) {
 
             return (
               <a
-                href={project.github}
+                href={project.live}
                 target="_blank"
                 key={i}
                 className={`p-4 ml-4 ${
