@@ -55,7 +55,7 @@ export default function HomeComp() {
                   <ModalHeader className="flex flex-col gap-1"></ModalHeader>
                   <ModalBody>
                     <embed
-                      src="/Samuel Ou Resume.pdf"
+                      src="/Samuel_Ou_Resume.pdf"
                       type="application/pdf"
                       className="m-auto w-full h-[500px] "
                     />
