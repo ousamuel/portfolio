@@ -46,6 +46,7 @@ export default function ExperienceComp({ isDarkMode }) {
               <h3 className={`vertical-timeline-element-title`}>
                 {exp.position}
               </h3>
+
               <h4 className="vertical-timeline-element-subtitle">
                 <a
                   className="hover:bg-gray-400"
