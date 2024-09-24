@@ -37,7 +37,7 @@ const projects = [
     description:
       // TypeScript - Node/Express - MongoDB\n
       "Simplify group finances and effortlessly manage shared expenses with CashTrack",
-    src: "/projects/cashtrack.png",
+    src: "/projects/cashtrack2.png",
     vid: "/vids/cashtrack.mp4",
     muted: false,
 
